@@ -1,0 +1,47 @@
+//CSS3
+
+=transition($speed: 600ms)
+	transition: all $speed
+
+
+=rotate($rotate: 45)
+	transform: rotate($rotate+deg)
+
+
+=translateY($translateY)
+	transform: translateY($translateY+px)
+
+
+=translateX($translateX)
+	transform: translateX($translateX+px)
+
+
+=radius($radius: 100%)
+	border-radius: $radius
+
+=radius-custom($radius-top, $radius-left, $radius-bottom, $radius-right)
+	border-radius: $radius-top $radius-left $radius-bottom $radius-right
+
+=opa($opa: .5)
+	opacity: $opa
+
+=rotateY($deg: 100)
+	transform: rotateY($deg+deg)
+
+
+=rotateX($deg: 100)
+	transform: rotateX($deg+deg)
+
+=scale($scaleX: 2, $scaleY: 2)
+	transform: scale($scaleX, $scaleY)
+
+
+
+// CUBIC
+=InOutBack($speed: 600ms)
+	transition: all $speed cubic-bezier(0.68, -0.55, 0.265, 1.55)
+
+// Animations
+
+=anim($value, $animation)
+	animation: $value 600ms $animation

@@ -1,0 +1,8 @@
+//- Icons
+
+mixin icon(icon, size)
+	- icon = icon || 'plus'
+	- size = size || 'lg'
+	i(class='fa fa-#{icon} fa-#{size}')
+
+

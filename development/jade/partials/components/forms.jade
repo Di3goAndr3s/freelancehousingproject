@@ -1,0 +1,123 @@
+//-forms
+
+mixin input-icon(value, icon, id, ident)
+	.form-item(class="#{ident}")
+		label.form-item #{value}:
+			strong *
+		span.form-item
+			i(class="fa fa-#{icon}")
+		input.form-item(type="text", placeholder='#{value}', title='#{value}', id='#{id}')
+
+
+
+mixin select-icon(value, icon, id, ident)
+	.form-item(class="#{ident}", id="#{id}")
+		label.form-item #{value}:
+			strong *
+		span.form-item
+			i(class="fa fa-#{icon}")
+		select(id='#{id}', class="form-item")
+				option= value
+				option Lorem Ipsum Dolor
+				option Lorem Ipsum
+				option Lorem Ipsum Dolor Sit
+				option Lorem
+				option Lorem Ipsum Sit
+
+
+mixin textarea-icon(value, icon, id, ident)
+	.form-item(class="#{ident}")
+		label.form-item #{value}:
+			strong *
+		span.form-item.icon-big
+			i(class="fa fa-#{icon}")
+		textarea.form-item(placeholder="#{value}", id='#{id}')
+
+mixin file-icon(value, icon, info, id, ident)
+	.form-item(class="#{ident}")
+		label.form-item #{value}:
+			strong *
+		.item-file(id='#{id}')
+			span.form-item
+				.value-file #{info}
+				i(class="fa fa-#{icon}")
+				input.form-item(type="file")
+
+
+
+mixin file-preview(value, info, required, ident)
+	- value = value || 'Imagen de perfil'
+	- info = info || 'Clic para insertar imagen'
+	- required = required || ''
+	.form-item(class="#{ident}")
+		label.form-item.centered #{value}:
+			strong #{required}
+		+s2
+		.file-preview
+			a.file-select(href='#', title='#{info}')
+				span
+					i.fa.fa-upload
+			figure
+				img(src='assets/images/profile.png', title='#{info}')
+		//-        span.file-info #{info}
+		input.file.hidden#file-preview(name='file', type='file')
+
+//- Checkbox
+
+mixin checkbox_tooltip(label, option, info, title)
+	- label = label || 'Proin eget tortor risus'
+	- option = option || 'option99'
+	- info = info || 'Cras ultricies ligula sed magna dictum porta'
+	- title = title || 'Ayuda'
+	.checkbox
+		input(type="checkbox", id='#{option}')
+		label.open-tooltip(for='#{option}', title='clic para seleccionar') #{label}
+		div(class='tooltip')
+			span
+				| #{title}
+			p #{info}
+
+
+mixin checkbox(label, option, ident)
+	- label = label || 'Proin eget tortor risus'
+	- option = option || '2'
+	- ident = ident || ''
+	.checkbox
+		input(type="checkbox", id='#{option}')
+		label(for='#{option}', title='clic para seleccionar', class='#{ident}') #{label}
+
+mixin checkbox-simple(option, ident)
+	- option = option || '2'
+	- ident = ident || ''
+	.checkbox-simple
+		input(type="checkbox", id='#{option}')
+		label(for='#{option}', title='clic para seleccionar', class='#{ident}')
+
+mixin radio-checked(label, option, ident)
+	- label = label || 'Proin eget tortor risus'
+	- option = option || '2'
+	- ident = ident || ''
+	.checkbox
+		input(type="radio", id='#{option}', name="#{option}" checked)
+		label(for='#{option}', title='clic para seleccionar', class='#{ident}') #{label}
+
+mixin radio(label, option, ident, name)
+	- label = label || 'Proin eget tortor risus'
+	- option = option || '2'
+	- ident = ident || ''
+	- name = name || ''
+	.checkbox
+		input(type="radio", id='#{option}', name="#{name}" )
+		label(for='#{option}', title='clic para seleccionar', class='#{ident}') #{label}
+
+//- Alert
+mixin alert(alert, icon, value)
+	-alert = alert || 'success'
+	-icon = icon || 'check'
+	-value = value || 'Lorem ipsum dolor sit amet, consectetur adipiscing elit'
+	div(class="alert #{alert}")
+		span
+			i(class="fa fa-#{icon}")
+			| #{value}
+			i(class="fa fa-times close-alert", title='Cerrar')
+

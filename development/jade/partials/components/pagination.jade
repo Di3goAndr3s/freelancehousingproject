@@ -1,0 +1,76 @@
+mixin pager2
+	+s4
+	div.pager
+		ul
+			li
+				a
+					i.fa.fa-chevron-left
+			li.active
+				a 1
+			each val in [2, 3, 4, 5, '>']
+				li
+					a= val
+
+mixin pager
+	+s4
+	div.pager
+		ul
+			li
+				a
+					i.fa.fa-chevron-left
+			li
+				a.active 1
+			li
+				a 2
+			li
+				a 3
+			li
+				a 4
+			li
+				a 5
+			li
+				a
+					i.fa.fa-chevron-right
+
+mixin pager-clasic
+	+s4
+	div.pager
+		ul
+			li
+				a
+					i.fa.fa-chevron-left
+			li
+				a.active 1
+			li
+				a 2
+			li
+				a 3
+			li
+				a 4
+			li
+				a 5
+			li
+				a
+					i.fa.fa-chevron-right
+
+mixin pager-rounded
+	+s4
+	div.pager-rounded
+		ul
+			li.prev
+				a
+					i.fa.fa-angle-left
+			li.first
+				a.active 1
+			li
+				a 2
+			li
+				a 3
+			li
+				a 4
+			li.last
+				a 5
+			li.next
+				a
+					i.fa.fa-angle-right
+

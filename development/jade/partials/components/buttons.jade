@@ -1,0 +1,52 @@
+//- BUTTONS
+
+
+mixin button(value)
+	a(title='', alt='', href='#', class="button")= value
+
+mixin button-full(value)
+	a(title='', alt='', href='#', class="button-full ")= value
+
+mixin button_full-modal(value)
+	a(title='', alt='', href='#', class="button-full open-modal")= value
+
+mixin button_full-icon
+	a(title='', alt='', href='#', class="button_full-icon")
+		i.fa.fa-arrow-right
+		| Ir a mis respuestas
+
+mixin button_full-cubic
+	.button_full-cubic
+		.flipper
+			a.front(href='pregunta.php', alt='')
+				| Descubre Mis respuestas
+			a.back(href='pregunta.php', alt='')
+				| Clic para realizar una pregunta
+				i.fa.fa-arrow-right
+
+mixin button_full-slide(front, back)
+	.button_full-slide(ontouchstart='this.classList.toggle(\'hover\');')
+		.flipper
+			a.front(href='pregunta.php')= front
+
+			a.back(href='pregunta.php')= back
+
+				i.fa.fa-arrow-right
+//- PREV NEXT
+
+mixin button-icon(href, value, ident, icon)
+	- href = href || '#'
+	- value = value || 'Lorem Ipsum'
+	- ident = ident || ''
+	- icon = icon || 'info'
+	a(href="#{href}", title="", class="#{ident} button-icon")
+		i(class='fa fa-#{icon}')
+		| #{value}
+
+mixin submit-icon(value, ident, icon)
+	- value = value || 'Lorem Ipsum'
+	- ident = ident || ''
+	- icon = icon || 'info'
+	div(class="#{ident} submit-icon")
+		input(type="submit", title="#{value}", value='#{value}')
+		i(class='fa fa-#{icon}')

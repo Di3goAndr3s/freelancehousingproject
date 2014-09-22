@@ -1,0 +1,160 @@
+/*TOOLTIP*/
+
+.mytooltip
+	position: absolute
+	+z(9999)
+	padding: 10px
+	width: 200px
+	height: 120px
+	+bg($gray-light + 20)
+	border: $borde
+	+co($gray)
+	+transition
+	overflow: auto
+	visibility: hidden
+	+opa(0)
+
+.tooltip-active
+	+opa(1)
+	+z(9999)
+	visibility: visible
+
+
+/*Tooltip*/
+
+.tooltip
+	width: 140px
+	+absolute(5px,null, null, 5px)
+	+bg($gray-light)
+	border: thin solid $gray
+	+transition(.3s)
+	transform: rotateY(180deg) scale(1,1) translate(20px, 0px)
+	+opa(0)
+	+hidden
+	+tCenter
+	+z(-1)
+	strong
+		+co($pink)
+	span
+		+bg($gray)
+		+block
+		+w100
+		+white
+		+fs(1.2, 100%)
+		padding: 5px
+		+upper
+
+	p
+		+fs(1.3, 120%)
+		padding: 5px
+		+m0
+
+
+.open-tooltip:hover + .tooltip
+	transform: rotateY(0deg) scale(1,1) translate(0px, 0px)
+	+opa(1)
+	+visible
+	+z(9999)
+
+.open-tooltip:hover > .tooltip
+	transform: rotateY(0deg) scale(1,1) translate(0px, 0px)
+	+opa(1)
+	+visible
+	+z(9999)
+
+
+
+.tooltip-top
+	@extend .tooltip
+	+absolute(-40px,null, null, 5px)
+
+.tooltip-left
+	@extend .tooltip
+	+absolute(null,null, 0px, -145px)
+
+.tooltip-bot
+	@extend .tooltip
+	+absolute(-80px,null, null, 0px)
+
+
+/*Tooltip-info*/
+
+.tooltip_info
+	+absolute(0,null,null,0)
+	+bg($gray-light)
+	+size(30px)
+	+pointer
+	+radius(100%)
+	+tCenter
+	+z(999)
+	+b1
+	border: thin solid $gray-light - 70
+	i
+		+co($gray)
+		+mt(6px)
+		+fs(1.8)
+
+	div
+		@extend .tooltip
+		right: -135px
+
+
+/*Tooltip_info-left*/
+
+
+.tooltip_info-left
+	@extend .tooltip_info
+	div
+		right: 35px
+		left: $in
+
+.tooltip-icon
+	@extend .tooltip_info
+	+relative
+	+noBorder
+	div
+		top: -30px
+		right: 0px
+		left: $in
+		+wauto
+		padding: 5px 15px
+		+fontLight
+		+white
+		+bg($purple - 30)
+		+fs(1.4)
+		border: thin solid white
+		text-transform: capitalize !important
+		i
+			+m0
+
+.tooltip-icon-text
+	@extend .tooltip_info
+	+noRadius
+	+size(auto 30px)
+	+relative
+	+noBorder
+	+inline-block
+	+co($purple)
+	+transition
+	+fs(1.8, 30px)
+	+hover
+		+co($purple + 30)
+	div
+		top: -40px
+		right: 0px
+		left: $in
+		+wauto
+		padding: 5px 15px
+		+fontLight
+		+white
+		+bg($purple - 30)
+		+fs(1.4)
+		border: thin solid white
+		text-transform: capitalize !important
+	i
+		+mr(5px)
+
+
+
+
+

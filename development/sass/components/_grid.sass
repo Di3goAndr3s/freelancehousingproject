@@ -1,0 +1,72 @@
+/*GRID*/
+
+.col-1
+	+w100
+	.col-item
+		+ml(10px)
+		width: 97.6%
+
+.col-1-align
+	+w100
+	.col-item
+		width: 100%
+
+.col-2
+	+box
+	+space($start)
+	+w100
+	.col-item
+		margin: 0 10px
+		flex: 0 1 47.5%
+
+.col-2-align
+	+box
+	+space()
+	+w100
+	.col-item
+		flex: 0 1 49%
+
+
+.col-3
+	+box
+	+space($start)
+	+align
+	+w100
+	.col-item
+		margin: 0 10px
+		flex: 0 1 31.2%
+
+
+
+.modal-container
+	.col-1
+		+box
+		+space($start)
+		+w100
+		.col-item
+			+flex
+			margin: 0 0px 20px
+			width: 100%
+			min-width: 100%
+			max-width: 100%
+
+	.col-2
+		+box
+		+space($bet)
+		+w100
+		.col-item
+			flex: 0 1 49%
+			+m0
+
+
+	.col-3
+		+box
+		+space($start)
+		+align
+		+w100
+		.col-item
+			+flex
+			margin: 0 10px 20px
+			width: 30.5%
+			min-width: 30.5%
+			max-width: 30.5%

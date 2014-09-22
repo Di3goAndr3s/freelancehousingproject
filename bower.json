@@ -1,0 +1,12 @@
+{
+  "name": "securityinafrica",
+  "version": "0.0.1",
+  "dependencies": {
+    "selectivizr": "*",
+    "bxSlider": "*",
+    "jquery.scrollTo": "*",
+    "jquery.easing": "*",
+    "jscrollpane": "*"
+
+  }
+}

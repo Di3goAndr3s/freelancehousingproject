@@ -1,0 +1,125 @@
+@import url(http://fonts.googleapis.com/css?family=Lato:300,400,700);
+/*HELPER */
+.clear {
+  clear: both; }
+
+.rounded {
+  border-radius: 5px; }
+
+.left {
+  float: left; }
+
+.right {
+  float: right; }
+
+.z999 {
+  z-index: 999; }
+
+.hidden {
+  visibility: hidden; }
+
+.b1 {
+  border: 0.1rem solid darkred; }
+
+.b2 {
+  border: 0.1rem solid navy; }
+
+.b3 {
+  border: 0.1rem solid lime; }
+
+.none {
+  display: none; }
+
+.relative {
+  position: relative; }
+
+.noFlex {
+  -webkit-box-flex: 0;
+  -webkit-flex: none;
+  -ms-flex: none;
+  flex: none; }
+
+.w1024 {
+  width: 1024px;
+  margin: 0 auto 0;
+  position: relative; }
+
+.w100 {
+  width: 100%; }
+
+.noScroll {
+  overflow: hidden; }
+
+.wrapper {
+  position: relative;
+  width: 1080px;
+  margin: 0 auto 0; }
+
+*, *:before, *:after {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%; }
+
+body,
+hmtl {
+  height: 100%;
+  overflow-x: hidden;
+  font-family: "Lato", sans-serif;
+  font-weight: 400; }
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block; }
+
+*:focus {
+  outline: none;
+  border: none;
+  -webkit-box-shadow: none;
+  box-shadow: none; }
+
+/*@header */
+header {
+  width: 100%;
+  height: 320px;
+  background: url("../images/bg-banner.jpg");
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center center; }
+  header figure {
+    height: 132px;
+    width: 132px;
+    border-radius: 100%;
+    border: 6px solid white;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: top;
+    white-space: normal; }
+  header img {
+    width: 100%;
+    height: 100%; }
+  header hgroup {
+    border: 0.1rem solid darkred;
+    width: 90%;
+    display: inline-block;
+    vertical-align: top;
+    white-space: normal; }
+  header .contact-data {
+    border: 0.1rem solid lime;
+    display: inline-block;
+    vertical-align: top;
+    white-space: normal;
+    width: 90%; }

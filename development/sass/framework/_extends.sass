@@ -1,0 +1,52 @@
+%none
+	display: none
+
+%clearfix
+	clear: both
+	&:after
+		content: ''
+		display: table
+		clear: both
+
+%headings
+	+fs(2.4,100%, 100)
+	+upper
+
+%subheadings
+	+fs(1.4, 100%, 700)
+	margin: 1.5rem 0
+	+upper
+
+%h100
+	height: 100%
+
+%relative
+	+relative
+
+
+// directional-property mixins are shorthands
+// for writing properties like the following
+//
+// @include margin(null 0 10px);
+// ------
+// margin-right: 0;
+// margin-bottom: 10px;
+// margin-left: 0;
+//
+// - or -
+//
+// @include border-style(dotted null);
+// ------
+// border-top-style: dotted;
+// border-bottom-style: dotted;
+//
+// ------
+//
+// Note: You can also use false instead of null
+
+
+
+
+
+
+

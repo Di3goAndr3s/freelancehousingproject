@@ -1,0 +1,25 @@
+//BREAKPOINTS
+
+=mobil($viewportMax:480)
+	@media screen and (max-width: $viewportMax+px)
+		@content
+
+=tablet($viewportMin:480, $viewportMax:1024)
+	@media screen and (min-width: $viewportMin+px) and (max-width: $viewportMax+px)
+		@content
+
+=ipad($viewportMin:768, $viewportMax:1024)
+	@media screen and (min-width: $viewportMin+px) and (max-width: $viewportMax+px)
+		@content
+
+=fluid($viewportMax:1024)
+	@media screen and (max-width: $viewportMax+px)
+		@content
+
+=desk($viewportMin:1024, $viewportMax:1280)
+	@media screen and (min-width: $viewportMin+px) and (max-width: $viewportMax+px)
+		@content
+
+=mq($viewportMax)
+	@media screen and (max-width: $viewportMax+px)
+		@content

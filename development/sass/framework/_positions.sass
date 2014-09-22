@@ -1,0 +1,27 @@
+//POSITIONS
+
+
+=fixed
+	position: fixed
+
+=absolute ($top:auto,$left:auto,$bottom:auto, $right:auto)
+	top: $top
+	right: $right
+	bottom: $bottom
+	left: $left
+	position: absolute
+
+=relative
+	position: relative
+
+=top-left($top: 0, $left: 0)
+	+absolute($top,$left,null,null)
+
+=top-right($top: 0, $right: 0)
+	+absolute($top,null,null,$right)
+
+=bot-left($bot: 0, $left: 0)
+	+absolute(null,$bot,$left,null)
+
+=bot-right($bot: 0, $right: 0)
+	+absolute(null,null, $bot, $right)

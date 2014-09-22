@@ -1,0 +1,30 @@
+mixin head(name)
+	head
+		meta(charset='utf-8')
+		meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
+		title  #{name}
+		link(rel='shortcut icon', type='image/x-icon', href='favicon.ico')
+		meta(http-equiv='content-language', content='es')
+		meta(http-equiv='pragma', content='No-Cache')
+		meta(name='Description', lang='es', content='')
+		meta(name='date', content='2014')
+		meta(name='robots', content='All')
+		link(rel='author', type='text/plain', href='humans.txt')
+		link(href='//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css', rel='stylesheet', type='text/css')
+		link(href='assets/css/main.css', rel='stylesheet', type='text/css')
+		script(src='assets/js/lib/jquery-1.11.0.min.js')
+		script(src='assets/js/main.js')
+	
+
+mixin header
+	header
+		.wrapper.b1
+			figure
+				img(src="assets/images/agente.jpg")
+			hgroup
+				h1 Lorem Ipsum Dolor
+				h2 Agente Inmobiliario
+			.contact-data
+				span.phone 12345678
+				span.mobil 234456787
+				span.mail agente@ubicala.com

@@ -1,0 +1,369 @@
+/*FORMS*/
+
+select, input[type="file"]
+	+noAppearance
+
+label
+	+block
+
+
+main.how-works select
+	+size(100% 40px)
+	+radius(3px)
+	+font
+	+fs(1.8, 30px)
+	+co(white)
+	+transition
+	padding: 0px 10px
+	+bg(url(../images/icons/hamburguer.png) center right 4% $nr)
+	border: thin solid white
+	+pointer
+	+focus
+		box-shadow: none
+		border: thin solid $gray-light
+		+bg(url(../images/icons/hamburguer-focus.png) center right 4% $nr)
+
+/*forms*/
+
+.form-3
+	+box
+	+space($start)
+	+w100
+	div.form-item
+		width: 31%
+		margin: 0 11px
+
+
+
+.form-2
+	+box
+	+space
+	div.form-item
+		width: 48%
+
+.form-1
+	+box
+	+space
+
+
+
+div.form-item
+	+mb(10px)
+	+relative
+	+w100
+
+
+/*form-icons*/
+
+label.form-item
+	+co($gray)
+	+mb(10px)
+	+fs(1.8)
+	+block
+	+w100
+	strong
+		+ml(10px)
+		+co($pink)
+span.form-item
+	+bg($gray-light)
+	+left
+	+size(15% 40px)
+	+tCenter
+	i
+		+co($gray)
+		+fs(2)
+		+mt(10px)
+
+span.icon-big
+	+bg($gray-light)
+	+left
+	+size(15% 120px)
+	+tCenter
+	i
+		+co($gray)
+		+fs(2)
+		+mt(40px)
+
+input[type='text'].form-item,
+input[type='password'].form-item
+	+size(85% 40px)
+	+fs(1.8, 40px)
+	+co($gray)
+	+pl(10px)
+	+block
+	+transition
+	+bt(thin solid $gray-light)
+	+br(thin solid $gray-light)
+	+bb(thin solid $gray-light)
+	+bl(none)
+	+focus
+		+bt(thin solid $gray-light - 30)
+		+br(thin solid $gray-light - 30)
+		+bb(thin solid $gray-light - 30)
+		+bl(none)
+
+
+
+select.form-item
+	+size(85% 40px)
+	+fs(1.8)
+	+co($gray)
+	+pl(10px)
+	+left
+	+bg(white url(../images/icons/hamburguer-gray.png) 95% 40% $nr)
+	+transition
+	+bt(thin solid $gray-light)
+	+br(thin solid $gray-light)
+	+bb(thin solid $gray-light)
+	+bl(none)
+	+noShadow
+	+focus
+		+bt(thin solid $gray-light - 30)
+		+br(thin solid $gray-light - 30)
+		+bb(thin solid $gray-light - 30)
+		+bl(none)
+		+noShadow
+		+bg(white url(../images/icons/hamburguer-focus-gray.png) 95% 40% $nr)
+
+
+
+textarea.form-item
+	+size(85% 120px)
+	+fs(1.8, 120%)
+	+co($gray)
+	padding: 10px
+	+left
+	+transition
+	+bt(thin solid $gray-light)
+	+br(thin solid $gray-light)
+	+bb(thin solid $gray-light)
+	+bl(none)
+	overflow: auto
+	+focus
+		+bt(thin solid $gray-light - 30)
+		+br(thin solid $gray-light - 30)
+		+bb(thin solid $gray-light - 30)
+		+bl(none)
+
+input[type='file'].form-item
+	+size(85% 40px)
+	+fs(1.8, 40px)
+	+co($gray)
+	+pl(10px)
+	+absolute(0, null, null, 0)
+	+transition
+	+bt(thin solid $gray-light)
+	+br(thin solid $gray-light)
+	+bb(thin solid $gray-light)
+	+bl(none)
+	+opa(0)
+	+focus
+		+bt(thin solid $gray-light - 30)
+		+br(thin solid $gray-light - 30)
+		+bb(thin solid $gray-light - 30)
+		+bl(none)
+
+.item-file
+	+bt(thin solid $gray-light)
+	+br(thin solid $gray-light)
+	+bb(thin solid $gray-light)
+	+bl(none)
+	height: 40px
+	+relative
+	+bg(white url(../images/icons/hamburguer-gray.png) 95% 40% $nr)
+
+
+
+.value-file
+	+size(85% 40px)
+	+fs(1.8, 40px)
+	+font
+	+co($gray)
+	+pl(10px)
+	+absolute(0, null, null, 0)
+	+tLeft
+
+
+.file-preview
+	+relative
+	+tCenter
+	+centered
+	+size(190px)
+	figure
+		+size(190px)
+		+radius(100%)
+		border: 6px solid $gray-light - 50
+		+clip
+		+centered
+		+noScroll
+		img
+			+s100
+
+	a.file-select
+		+absolute(null,null, 0, 0)
+		+block
+		+size(190px)
+		&:hover span
+			+opa(1)
+			+transition
+
+		span
+			+opa(0)
+			+radius(100%)
+			+size(190px)
+			+absolute(null,0, 0px, null)
+			+bgWhite(.3)
+			+transition
+			i
+				//				+bg($green-light)
+				+co($gray)
+				+size(80px)
+				+radius(100%)
+				padding: 20px 0 0
+				+fs(4)
+				+mt(55px)
+
+.file
+	+none
+	+hidden
+	+top-left
+
+
+/**/
+
+label.centered
+	+centered
+	+tCenter
+	+w100
+
+
+/*CHECKBOX*/
+
+.checkbox
+	input[type=checkbox], input[type=radio]
+		visibility: hidden
+		+none
+
+	label
+		+pl(30px)
+		+bg(url('../images/icons/check.png') left center $nr)
+		+fs(1.7, 100%)
+		+pt(7px)
+		+co($gray - 20)
+		+transition
+		+pointer
+		min-height: 22px
+
+		+relative
+		+z(1)
+
+	input[type=checkbox]:checked + label, input[type=radio]:checked + label
+		+bg(url('../images/icons/checked.png') left center $nr)
+		+transition
+
+
+.checkbox-simple
+	input[type=checkbox], input[type=radio]
+		visibility: hidden
+		+none
+
+	label
+		+pl(30px)
+		+bg(url('../images/icons/check.png') center center $nr)
+		+fs(1.7, 100%)
+		+pt(7px)
+		+co($gray - 20)
+		+transition
+		+pointer
+		min-height: 22px
+		+noText
+		+relative
+		+z(1)
+
+	input[type=checkbox]:checked + label, input[type=radio]:checked + label
+		+bg(url('../images/icons/checked.png') center center $nr)
+		+transition
+
+
+/*Alert*/
+
+.alert
+	+w100
+	span
+		+absolute
+		+translateX(-2000)
+		+transition
+		+radius(5px)
+		+opa(0)
+		padding: 8px 10px 10px
+		+w100
+		font-family: $regular $i
+		+fs(1.8, 20px)
+		+block
+		a
+			+white
+			+hover
+				+under
+		i
+			+fs(2.2, 120%)
+			+nth1
+				+mr(12px)
+			+nth2
+				+top-right(12px, 10px)
+				+fs(1.8)
+				+pointer
+
+
+.success
+	span
+		+bg($success + 80)
+		border: thin solid $success + 80
+		+co($success $i)
+		i
+			+co($success)
+			+nth2
+				+co($success + 40)
+
+.warning
+	span
+		+bg($warning + 120)
+		border: thin solid $warning + 80
+		+co($warning $i)
+		i
+			+co($warning)
+			+nth2
+				+co($warning + 40)
+
+
+.alert-active
+	span
+		+translateX(0)
+		+transition
+		+relative
+		+opa(1)
+
+
+
+/*PlaceHolder*/
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder,
+	+co($place)
+::-moz-input-placeholder
+	+co($place)
+input:-moz-input-placeholder,
+textarea:-moz-input-placeholder
+	+co($place)
+input:-moz-placeholder,
+textarea:-moz-placeholder
+	+co($place)
+input::-moz-placeholder,
+textarea::-moz-placeholder
+	+co($place)
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder
+	+co($place)
+.form-item:-ms-input-placeholder
+	+co($place)
+input
+	+co($gray)

@@ -1,0 +1,166 @@
+//SNIPPETS
+
+=mt($margin-top)
+	margin-top: $margin-top
+
+=ml($margin-left)
+	margin-left: $margin-left
+
+=mr($margin-right)
+	margin-right: $margin-right
+
+=mb($margin-bottom)
+	margin-bottom: $margin-bottom
+
+//BORDES
+
+=bt($bt:thin solid $gray)
+	border-top: $bt
+
+=bb($bb:thin solid $gray)
+	border-bottom: $bb
+
+=bl($bl:thin solid $gray)
+	border-left: $bl
+
+=br($br:thin solid $gray)
+	border-right: $br
+
+
+//PADDINGS
+
+=pt($pt)
+	padding-top: $pt
+
+=pb($pb)
+	padding-bottom: $pb
+
+=pl($pl)
+	padding-left: $pl
+
+=pr($pr)
+	padding-right: $pr
+
+=clear
+	clear: both
+
+=none
+	display: none
+
+=hidden
+	visibility: hidden
+
+=visible
+	visibility: visible
+
+=centered($center1: 0, $center2: 0)
+	margin: $center1 auto $center2
+
+=auto
+	margin: auto
+
+=lh($lineHeight: 100%)
+	line-height: $lineHeight
+
+=inline
+	display: inline
+
+=inline-block($vertical-align: top)
+	display: inline-block
+	vertical-align: $vertical-align
+	white-space: normal
+
+
+=fs($font-size: 1.4, $line-height: 100%, $font-weight: normal)
+	font-size: $font-size+rem
+	line-height: $line-height
+	font-weight: $font-weight
+
+=ma($margin1: 0, $margin2: 0, $margin3: 0, $margin4: 0)
+	margin: $margin1+rem $margin2+rem $margin3+rem $margin4+rem
+
+=pa($padding1,$padding2,$padding3,$padding4)
+	padding: $padding1+rem $padding2+rem $padding3+rem $padding4+rem
+
+
+=uppercase
+	text-transform: uppercase
+
+=upper
+	text-transform: uppercase
+
+=capi
+	text-transform: capitalize
+
+
+=left
+	float: left
+
+=right
+	float: right
+
+=under
+	text-decoration: underline
+
+=tCenter
+	text-align: center
+
+=tLeft
+	text-align: left
+
+=tRight
+	text-align: right
+
+=tJustify
+	text-align: justify
+
+=tJust
+	text-align: justify
+
+=ls($letter: 0px)
+	letter-spacing: $letter
+
+=cursive
+	font-style: italic
+
+=ti($indent: -999)
+	text-indent: $indent+rem
+
+=fw($weight)
+	font-weight: $weight
+
+=border
+	border: $borde
+
+
+=z($index)
+	z-index: $index
+
+=block
+	display: block
+
+=pointer
+	cursor: pointer
+
+=gradient($direction,$from, $value1,$to, $value2)
+	background-color: $from
+	background-image: linear-gradient($direction, $from $value1, $to $value2)
+	background-image: -webkit-linear-gradient($direction, $from $value1, $to $value2)
+	background-image: linear-gradient($direction, $from $value1, $to $value2)
+//    background-image: url('../img/bg_hexagono.png'), linear-gradient(left, $bg-brown_light 0%, $bg-brown_dark 100%)
+=gradientHeader
+	background: $bg-brown_light
+	background-image: url('../img/bg_hexagono.png')
+	@include background-image(url('../img/bg_hexagono.png'), linear-gradient(left, $bg-brown_light 30%, $bg-gray 70%))
+
+=bg($background)
+	background: $background
+
+=co($color: red)
+	color: $color
+
+=bs($background-size: cover)
+	background-size: $background-size
+
+=bp($background-position: top center)
+	background-position: $background-position

@@ -1,0 +1,66 @@
+//- TOOLTIPS
+
+//- tooltip
+
+mixin tooltip(info, tooltip)
+	- info = info || 'Proin eget tortor risus. Donec rutrum congue leo eget'
+	- tooltip = tooltip || 'top'
+	div(class='tooltip-#{tooltip}')
+		span
+			| Ayuda
+		p #{info}
+
+//- info
+
+mixin tooltip_info(info)
+	- info = info || 'Proin eget tortor risus. Donec rutrum congue leo eget'
+	- icon = icon || 'info'
+	.tooltip_info.open-tooltip(title='')
+		i(class="fa fa-#{icon} ")
+		div.tooltip
+			span
+				| Ayuda
+			p #{info}
+
+mixin tooltip_info-left(info, icon)
+	- info = info || 'Proin eget tortor risus. Donec rutrum congue leo eget'
+	- icon = icon || 'info'
+	.tooltip_info-left.open-tooltip(title='')
+		i(class="fa fa-#{icon} ")
+		div.tooltip
+			span
+				| Ayuda
+			p #{info}
+
+mixin tooltip_form-mandatory(info, icon)
+	- icon = icon || 'info'
+	.tooltip_info-left.open-tooltip(title='')
+		i(class="fa fa-#{icon} ")
+		div.tooltip
+			span
+				| Ayuda
+			p
+				| Los campos con <strong>*</strong> son olbigatorios
+
+
+
+mixin tooltip-icon(info, icon, ident)
+	- info = info || 'Ver'
+	- icon = icon || 'eye'
+	- ident = ident || ''
+	a(title='', class='#{ident} tooltip-icon open-tooltip')
+		i(class="fa fa-#{icon} ")
+		div.tooltip
+			| #{info}
+
+mixin tooltip-icon-text(info, icon, ident, text, href)
+	- info = info || 'Ver'
+	- icon = icon || 'eye'
+	- ident = ident || ''
+	- text = text || 'Inicio de sesión'
+	- href = href || '#'
+	a(title='', class='#{ident} tooltip-icon-text open-tooltip', href="#{href}")
+		i(class="fa fa-#{icon} ")
+		| #{text}
+		div.tooltip
+			| #{info}

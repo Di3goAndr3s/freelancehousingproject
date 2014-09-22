@@ -1,0 +1,35 @@
+
+//GRID
+
+=box
+	display: flex
+	flex-flow: row wrap
+
+=column
+	display: flex
+	flex-flow: column nowrap
+
+=align($align-item: flex-start)
+	align-items: $align-item
+
+=flex($flex: 1)
+	flex: $flex
+
+=item($align-self: auto)
+	align-self: $align-self
+
+=space($value:space-between)
+	justify-content: $value
+
+=noWrap
+	flex-flow: row nowrap
+
+//GRID
+
+$end: flex-end
+$start: flex-start
+$cen: center
+$bet: space-between
+$aro: space-around
+$base: baseline
+$str: stretch

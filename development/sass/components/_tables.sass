@@ -1,0 +1,36 @@
+/*Tables*/
+
+td, tr, th, hr
+	padding: 0
+	margin: 0
+
+.table-full
+	+w100
+	border: $borde
+	thead
+		+bg($purple - 30)
+	th
+		+tCenter
+		+white
+		+fs(2)
+		border: thin solid white
+		padding: 10px
+	tbody
+		+bg($gray-light)
+		th
+			+co($gray-font)
+			+fs(1.8, 120%)
+			+tLeft
+		a
+			+tCenter
+			+block
+			+co($gray)
+			+transition
+			+w100
+			+hover
+				+co($gray - 50)
+
+
+	tr th:nth-of-type(2), tr th:nth-of-type(3)
+		width: 110px
+

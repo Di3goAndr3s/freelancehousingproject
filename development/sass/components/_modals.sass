@@ -1,0 +1,66 @@
+/*Modals*/
+
+.modal-top
+	+fixed
+	+z(9999999)
+	width: 800px
+	height: 640px
+	max-height: 640px
+	left: 50%
+	top: -2000px
+	+ml(-400px)
+	+mt(-320px)
+	+InOutBack
+
+.modal-active
+	top: 50%
+	+InOutBack
+
+.overlay
+	+size(100%)
+	+bgBlack(.7)
+	+opa(0)
+	+fixed
+	bottom: 0px
+	left: 0
+	+z(-999999)
+	+hidden
+	+transition
+
+
+.overlay-active
+	+z(999)
+	+opa(1)
+	bottom: 0
+	+pointer
+	+transition
+	+visible
+	+z(999999)
+
+.close-modal
+	+radius(100%)
+	+size(50px)
+	+bg($orange)
+	border: 6px solid $gray-light
+	+block
+	+absolute(-25px,null,null,-25px)
+	+co(white)
+	+tCenter
+	+transition
+	+z(9999)
+	i
+		+fs(3)
+		+mt(3px)
+	+hover
+		+rotate(360)
+
+.modal-top
+	h4
+		+relative
+		+fontBold
+		+fs(2, 110%)
+		+co($gray)
+		+upper
+	h1,
+	h2
+		+wauto

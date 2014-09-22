@@ -1,0 +1,74 @@
+//$Colors
+
+$transparent: rgba(0,0,0,0)
+
+$color1: #172C3C
+$color2: #E6B33D
+$color3: #D96831
+$color4: #995052
+$color5: #274862
+
+//$blue
+$blue: $color1
+
+//$yellow
+$yellow: $color2
+
+//Orange
+$orange: $color3
+
+//Red
+$red: $color4
+
+//Green
+$green: $color5
+
+//$Gray
+$gray: #555
+$gray-light: $gray + 100
+$gray-dark: $gray - 100
+$gray-font: $gray - 30
+
+//Cake
+$cake: #E3DAD6
+$cake-dark:#BDB0AA
+
+//Purple
+$purple: #597D9D
+
+//Pink
+$pink: #F06560
+
+// Black
+$black: #222
+$black-light: #333
+$black-dark: #000
+
+//WHITE
+$white: #ffffff
+
+
+//COLORS MIXINS
+=gray()
+	color: $gray
+
+=white()
+	color: $white
+
+=black
+	color: $black
+
+=bgWhite($opacity:1)
+	background: rgba(255,255,255,$opacity)
+
+=bgBlack($opacity:1)
+	background: rgba(0,0,0,$opacity)
+
+
+
+//Gradient
+=degra
+	+gradient(top,#fff, 10%, #f9f9f9, 80%)
+	
+$primary: $pink
+$secundary: #0060aa

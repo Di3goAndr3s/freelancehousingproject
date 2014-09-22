@@ -1,0 +1,78 @@
+/*PAGINATION*/
+
+.pager
+	+tCenter
+	ul
+		+box
+		+space($cen)
+		li
+			margin: 0 3px
+			a
+				+block
+				+bg($purple)
+				+co(white)
+				+size(30px)
+				+fs(1.6, 30px, null)
+				+pointer
+				+transition
+				+radius(5px)
+				+hover
+					+bg($purple - 60)
+				i
+					+mt(8px)
+			a.active
+				+bg($purple - 40)
+
+.pager-rounded
+	+tCenter
+	+w100
+	+clear
+	+relative
+	+z(99)
+	ul
+		+wauto
+		+inline-block
+		box-shadow: 1px 1px 0px rgba(0,0,0,.2)
+		+radius(10px)
+		li
+
+			border-left: thin solid $gray-light
+			+m0
+			+left
+			a
+				+block
+				+bg(white)
+				+co($gray-dark)
+				+size(35px)
+				+fs(1.6, 35px, null)
+				+pointer
+				+fontBold
+				+transition
+				+hover
+					+co($pink)
+				i
+					+mt(8px)
+			.active
+				+bg($pink)
+				+co(white)
+				+hover
+					+co(white)
+		.first
+			border-left: thin solid $gray-light
+
+		.last
+			border-right: thin solid $gray-light
+
+		.prev
+			+noBorder
+			a
+				+radius-custom(10px, 0, 0, 10px)
+
+		.next
+			+noBorder
+			a
+				+radius-custom(0, 10px, 10px, 0)
+
+
+
+

@@ -1,0 +1,72 @@
+/*ANIMATIONS*/
+
+/*down*/
+
+@keyframes down
+	0%,
+		transform: translateY(-1000px)
+
+	100%
+		transform: translateY(0px)
+
+/*left*/
+
+@keyframes left
+	0%,
+		transform: translateX(-1000px)
+
+	100%
+		transform: translateX(0px)
+
+/*bottom*/
+
+@keyframes bottom
+	0%,
+		transform: translateY(1000px)
+
+	100%
+		transform: translateY(0px)
+
+/*flash*/
+
+@keyframes flash
+	0%,
+		+scale(0,0)
+		+opa(1)
+
+	100%
+		+scale(2,2)
+		+opa(0)
+
+/*scale-rotate*/
+
+@keyframes scale-rotate
+	0%,
+		+scale(.1,.1)
+		+rotateY(180)
+		+opa(0)
+
+	100%
+		+scale(1,1)
+		+rotateY(0)
+		+opa(1)
+
+/*Bounce*/
+
+@keyframes bounce
+	0%,
+		+scale(.1,.1)
+		+rotateY(180)
+		+opa(0)
+
+	100%
+		+scale(1,1)
+		+rotateY(0)
+		+opa(1)
+
+
+
+
+
+
+

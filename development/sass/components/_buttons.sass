@@ -1,0 +1,229 @@
+/*BUTTONS*/
+
+/*submit-primary*/
+
+input[type='submit'].submit-primary,
+.submit-primary
+	+white
+	padding: 10px 20px
+	+fs(2, 100%)
+	+pointer
+	+transition(.1s)
+
+	border: thin solid $gray
+	+bg( $green-light - 50 url(../images/bg-buttons.png) top right $nr)
+	&:active,
+	&:hover
+		+bg( $green-light - 50 url(../images/bg-buttons.png) top right $nr)
+	i
+		+mr(5px)
+
+
+/*button*/
+.button
+	+co($white)
+	+bg($bg-principal)
+	padding: 15px 40px
+	+tCenter
+	+fs(2.4, 100%)
+	+fontBold
+	+ls(1px)
+	+capi
+	+inline-block
+	+transition
+	+hover
+		+bg($bg-principal - 30)
+
+/*button-full*/
+
+.button-full
+	+block
+	+tCenter
+	+bg($bg-principal - 30)
+	+co($white)
+	+fs(4, 100%, normal)
+	padding: 20px 0
+	+fontLight
+	+transition
+	+hover
+		+bg($bg-principal - 60)
+
+/*full-icon*/
+
+.button_full-icon
+	+block
+	+tCenter
+	+bg($bg-principal - 30)
+	+co($white)
+	+fs(4, 100%, normal)
+	padding: 20px 0
+	+fontLight
+	+transition
+	+hover
+		+bg($bg-principal - 60)
+		i
+			+rotateX(180)
+
+	i
+		+right
+		+mr(30px)
+		+transition
+
+/*full-cubic*/
+
+.button_full-cubic
+	perspective: 1000
+	+size(100% 80px)
+	+bg(white)
+
+	.front,
+	.back
+		+tCenter
+		+bg($bg-principal - 50)
+		+co($white)
+		+fs(4, 80px)
+		+size(100% 80px)
+		+fontLight
+		i
+			+right
+			margin: 20px 30px 0 0
+
+	.flipper
+		+transition
+		transform-style: preserve-3d
+		+relative
+
+	.front,
+	.back
+		backface-visibility: hidden
+		position: absolute
+		top: 0
+		left: 0
+
+	.front
+		+z(2)
+
+	.back
+		+rotateY(180)
+		+bg($bg-principal - 70)
+
+.button_full-cubic:hover .flipper
+	+rotateY(180)
+
+/*full-slide*/
+.button_full-slide
+	perspective: 1000
+	+size(100% 80px)
+	+bg(white)
+	+pointer
+
+
+	.front,
+	.back
+		+tCenter
+		+bg($bg-principal - 50)
+		+co($white)
+		+fs(4, 80px)
+		+size(100% 80px)
+		+fontLight
+		i
+			+right
+			margin: 20px 30px 0 0
+
+	.flipper
+		+transition
+		transform-style: preserve-3d
+		+relative
+
+	.front,
+	.back
+		backface-visibility: hidden
+		position: absolute
+		top: 0
+		left: 0
+		+transition
+
+	.front
+		+z(2)
+		+translateX(0)
+		+transition
+		+bg($bg-principal - 30)
+
+.button_full-slide:hover .front
+	+translateX(1000)
+
+/*Prev Next*/
+
+.prev-icon
+	+b1
+
+/*button-icon*/
+
+.button-icon
+	+relative
+	+white
+	padding: 10px 20px 10px 60px
+	+fs(2, 100%)
+	+pointer
+	+inline-block
+	+transition
+	+bg($green-light - 30 url(../images/bg-buttons.png) top right $nr)
+	box-shadow: 0 1px 0 $green-light - 50
+	+before
+		+content('')
+		+top-left
+		+bg($green-light - 50 url(../images/bg-buttons.png) center center $nr)
+		+h100
+		border-right: thin solid $gray-light
+		padding: 10px 20px
+	&:active,
+	&:hover,
+	&:focus
+		+bg( $green-light - 50 url(../images/bg-buttons.png) top right $nr)
+	i
+		+top-left(10px, 12px)
+
+
+.button-blue
+	+bg($purple - 30 url(../images/bg-buttons.png) top right $nr)
+	box-shadow: 0 1px 0 $purple - 50
+	+before
+		+bg($purple - 50 url(../images/bg-buttons.png) center center $nr)
+		background-image: none
+	&:active,
+	&:hover,
+	&:focus
+		+bg($purple - 50 url(../images/bg-buttons.png) top right $nr)
+
+
+/*Submit-icon*/
+
+.submit-icon
+	+relative
+	+white
+	+before
+		+content('')
+		+top-left
+		+bg($green-light - 50 url(../images/bg-buttons.png) center center $nr)
+		+h100
+		border-right: thin solid $gray-light
+		padding: 10px 20px
+	i
+		+top-left(10px, 12px)
+		+fs(2)
+	input[type='submit']
+		+white
+		padding: 10px 20px 10px 60px
+		+fs(2, 100%)
+		+pointer
+		+inline-block
+		+transition
+		+bg($green-light - 30 url(../images/bg-buttons.png) top right $nr)
+		box-shadow: 0 1px 0 $green-light - 50
+		&:active,
+		&:hover,
+		&.focus
+			+bg( $green-light - 50 url(../images/bg-buttons.png) top right $nr)
+
+
+
