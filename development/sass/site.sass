@@ -6,19 +6,40 @@ header
 	+bg(url('../images/bg-banner.jpg'))
 	+bs(cover)
 	+bp(center center)
-	figure
-		+size(132px)
-		+radius
-		border: 6px solid $white
-		+noScroll
-		+inline-block
-	img
-		+s100
-	hgroup
+	.wrapper
+		+grid-left
 		+b1
-		width: 90%
-		+inline-block
+
+	figure
+		+col
+		width: 132px
+		margin: 100px 0 0 200px
+		img
+			border: 6px solid $white
+			+s100
+			+radius
+
 	.contact-data
-		+b3
-		+inline-block
-		width: 90%
+		+col
+		+wauto
+		margin: 100px 0 0 20px
+		+white
+		hgroup
+			h1, 
+			h2
+				+fs(4, 100%, 700)
+			h2
+				+fw(400)
+		span
+			+block
+			+pl(30px)
+			+fs(2, 100%, 400)
+			i
+				+bg($black)
+				+radius
+				padding: 10px
+				+size(24px)
+
+
+
+	

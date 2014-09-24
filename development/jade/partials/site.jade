@@ -16,15 +16,39 @@ mixin head(name)
 		script(src='assets/js/main.js')
 	
 
+-color = color || 'red'
+- name = name || 'Antonia Garcia Perez'
+- rol = rol || 'Agente Inmobiliario'
+- phone = phone || '57 + 1 2425639'
+- mobil = mobil || '314 4598126'
+- mail = mail || 'agente@ubicala.com'
+
 mixin header
 	header
-		.wrapper.b1
+		//-		img(src="assets/images/bg-banner.jpg")
+		.wrapper
 			figure
 				img(src="assets/images/agente.jpg")
-			hgroup
-				h1 Lorem Ipsum Dolor
-				h2 Agente Inmobiliario
 			.contact-data
-				span.phone 12345678
-				span.mobil 234456787
-				span.mail agente@ubicala.com
+				hgroup
+					h1 #{name}
+					h2 #{rol}		
+				span.phone
+					+icon 
+					| #{phone}
+				span.mobil #{mobil}
+				span.mail #{mail}
+					
+mixin main-menu
+	nav
+		ul
+			each val in ['inmuebles', 'proyectos', 'contacto']
+				li= val
+
+mixin icon
+	-icon = icon || 'phone'
+	-size = size || ''
+	i(class='fa fa-#{icon} fa-#{size}')
+
+
+	
