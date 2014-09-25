@@ -32,22 +32,27 @@ mixin header
 			.contact-data
 				hgroup
 					h1 #{name}
-					h2 #{rol}		
-				span.phone
-					+icon 
-					| #{phone}
-				span.mobil #{mobil}
-				span.mail #{mail}
+					h2 #{rol}
+				span
+					+icon('mobile','lg')
+				p #{mobil}
+				span
+					+icon('phone','') 
+				p #{phone}
+				span
+					+icon('envelope-o','')
+				p #{mail}
 					
 mixin main-menu
-	nav
+	nav.main-menu
 		ul
 			each val in ['inmuebles', 'proyectos', 'contacto']
-				li= val
+				li
+					a= val
 
-mixin icon
-	-icon = icon || 'phone'
-	-size = size || ''
+mixin icon(icon,size)
+	-icon = icon || ''
+	-size = size || '1x'
 	i(class='fa fa-#{icon} fa-#{size}')
 
 

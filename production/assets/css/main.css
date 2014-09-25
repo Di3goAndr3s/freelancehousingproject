@@ -107,8 +107,7 @@ section {
 
 .col {
   vertical-align: top;
-  display: inline-block;
-  width: 100%; }
+  display: inline-block; }
 
 .col-1 {
   vertical-align: top;
@@ -199,7 +198,6 @@ header {
   header figure {
     vertical-align: top;
     display: inline-block;
-    width: 100%;
     width: 132px;
     margin: 100px 0 0 200px; }
     header figure img {
@@ -210,7 +208,6 @@ header {
   header .contact-data {
     vertical-align: top;
     display: inline-block;
-    width: 100%;
     width: auto;
     margin: 100px 0 0 20px;
     color: white; }
@@ -222,14 +219,54 @@ header {
     header .contact-data hgroup h2 {
       font-weight: 400; }
     header .contact-data span {
-      display: block;
-      padding-left: 30px;
+      background: #1b1b1b;
+      border-radius: 100%;
+      height: 30px;
+      width: 30px;
+      line-height: 28px;
+      text-align: center;
+      float: left;
+      clear: left;
+      margin-top: 5px; }
+    header .contact-data p {
       font-size: 2rem;
-      line-height: 100%;
-      font-weight: 400; }
-      header .contact-data span i {
-        background: #1b1b1b;
-        border-radius: 100%;
-        padding: 10px;
-        height: 24px;
-        width: 24px; }
+      line-height: 30px;
+      font-weight: 400;
+      float: left;
+      text-indent: 10px;
+      margin-top: 5px; }
+
+nav {
+  background: #f06560;
+  border: 0.1rem solid violet; }
+  nav ul {
+    text-align: center !important;
+    text-justify: distribute-all-lines;
+    font-size: 0 !important;
+    border: 0.1rem solid darkred;
+    position: relative;
+    width: 1080px;
+    margin: 0 auto 0;
+    height: 70px; }
+    nav ul > * {
+      text-align: left;
+      font-size: medium; }
+    nav ul:after {
+      content: "";
+      display: inline-block;
+      width: 100%; }
+    nav ul li {
+      vertical-align: top;
+      display: inline-block;
+      border: 0.1rem solid navy;
+      width: 31.12583%; }
+      nav ul li a {
+        border: 0.1rem solid lime;
+        color: white;
+        display: block;
+        line-height: 70px;
+        text-align: center;
+        text-transform: uppercase;
+        font-size: 2rem;
+        line-height: 70px;
+        font-weight: 700; }
