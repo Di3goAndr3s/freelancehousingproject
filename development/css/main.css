@@ -55,9 +55,6 @@
   width: 1080px;
   margin: 0 auto 0;
   display: block; }
-  @media screen and (max-width: 1024px) {
-    .wrapper {
-      max-width: 100%; } }
 
 *, *:before, *:after {
   margin: 0;
@@ -94,36 +91,6 @@ section {
   border: none;
   -webkit-box-shadow: none;
   box-shadow: none; }
-
-p {
-  margin-bottom: 10px; }
-  p:nth-last-child {
-    margin-bottom: 0; }
-
-ul {
-  list-style-image: none !important;
-  list-style-type: none !important;
-  list-style: none !important; }
-
-a {
-  text-decoration: none; }
-
-/*BUTTONS */
-/*button */
-.button {
-  background: #f06560;
-  color: white;
-  margin-top: 10px;
-  padding: 10px;
-  display: block;
-  display: inline-block;
-  vertical-align: top;
-  white-space: normal;
-  font-size: 1.8rem;
-  line-height: 100%;
-  font-weight: 400; }
-  .button:hover {
-    background: #3b5f7f; }
 
 /*GRID */
 .grid {
@@ -216,14 +183,15 @@ header {
   -webkit-background-size: cover;
   background-size: cover;
   background-position: center center; }
-  header > .wrapper {
+  header .wrapper {
     text-align: left !important;
     text-justify: distribute-all-lines;
-    font-size: 0 !important; }
-    header > .wrapper > * {
+    font-size: 0 !important;
+    border: 0.1rem solid darkred; }
+    header .wrapper > * {
       text-align: left;
       font-size: medium; }
-    header > .wrapper:after {
+    header .wrapper:after {
       content: "";
       display: inline-block;
       width: 100%; }
@@ -251,7 +219,7 @@ header {
     header .contact-data hgroup h2 {
       font-weight: 400; }
     header .contact-data span {
-      background: #262626;
+      background: #1b1b1b;
       border-radius: 100%;
       height: 30px;
       width: 30px;
@@ -266,17 +234,20 @@ header {
       font-weight: 400;
       float: left;
       text-indent: 10px;
-      margin: 5px 0 0; }
+      margin-top: 5px; }
 
 nav {
-  background: #f06560; }
+  background: #f06560;
+  border: 0.1rem solid violet; }
   nav ul {
-    text-align: justify !important;
+    text-align: center !important;
     text-justify: distribute-all-lines;
     font-size: 0 !important;
+    border: 0.1rem solid darkred;
     position: relative;
     width: 1080px;
-    margin: 0 auto 0; }
+    margin: 0 auto 0;
+    height: 70px; }
     nav ul > * {
       text-align: left;
       font-size: medium; }
@@ -287,65 +258,15 @@ nav {
     nav ul li {
       vertical-align: top;
       display: inline-block;
+      border: 0.1rem solid darkred;
       width: 31.12583%; }
       nav ul li a {
+        border: 0.1rem solid darkred;
         color: white;
         display: block;
+        line-height: 70px;
         text-align: center;
         text-transform: uppercase;
-        font-size: 1.8rem;
-        line-height: 60px;
-        font-weight: 700;
-        text-decoration: none;
-        -webkit-transition: all 0.2s;
-        transition: all 0.2s; }
-        nav ul li a:hover {
-          text-decoration: underline; }
-
-main {
-  background: #f6f6f6; }
-  main > .wrapper {
-    border: 0.1rem solid chocolate; }
-    main > .wrapper .featured-left {
-      margin-top: 50px; }
-      main > .wrapper .featured-left span {
-        background: #262626;
-        border-radius: 100%;
-        height: 78px;
-        width: 78px;
-        text-align: center;
-        margin: 0 auto 0;
-        display: block;
-        color: white; }
-        main > .wrapper .featured-left span i {
-          line-height: 78px; }
-      main > .wrapper .featured-left h3 {
         font-size: 2rem;
-        line-height: 100%;
-        font-weight: 400;
-        text-transform: uppercase;
-        margin-bottom: 10px; }
-      main > .wrapper .featured-left p {
-        font-size: 1.6rem;
-        line-height: 110%;
-        font-weight: 400;
-        color: #777776; }
-    main > .wrapper .featured-right {
-      margin-top: 50px; }
-      main > .wrapper .featured-right figure {
-        text-align: center; }
-        main > .wrapper .featured-right figure figcaption {
-          font-size: 1.6rem;
-          line-height: 110%;
-          font-weight: 700;
-          color: #777776;
-          margin-top: 10px; }
-
-.property {
-  margin-top: 90px; }
-  .property h3 {
-    border: 0.1rem solid darkred; }
-    .property h3 strong {
-      border: 0.1rem solid navy; }
-    .property h3 span {
-      border: 0.1rem solid chocolate; }
+        line-height: 70px;
+        font-weight: 700; }

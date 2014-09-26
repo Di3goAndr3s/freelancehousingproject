@@ -1,75 +1,75 @@
 /*GRID*/
 
 //.col-1
-//	+w100
-//	.col-item
-//		+ml(10px)
-//		width: 97.6%
+//    +w100
+//    .col-item
+//        +ml(10px)
+//        width: 97.6%
 
 //.col-1-align
-//	+w100
-//	.col-item
-//		width: 100%
+//    +w100
+//    .col-item
+//        width: 100%
 //
 //.col-2
-//	+box
-//	+space($start)
-//	+w100
-//	.col-item
-//		margin: 0 10px
-//		flex: 0 1 47.5%
+//    +box
+//    +space($start)
+//    +w100
+//    .col-item
+//        margin: 0 10px
+//        flex: 0 1 47.5%
 //
 //.col-2-align
-//	+box
-//	+space()
-//	+w100
-//	.col-item
-//		flex: 0 1 49%
+//    +box
+//    +space()
+//    +w100
+//    .col-item
+//        flex: 0 1 49%
 //
 //
 //.col-3
-//	+box
-//	+space($start)
-//	+align
-//	+w100
-//	.col-item
-//		margin: 0 10px
-//		flex: 0 1 31.2%
+//    +box
+//    +space($start)
+//    +align
+//    +w100
+//    .col-item
+//        margin: 0 10px
+//        flex: 0 1 31.2%
 //
 //
 //
 //.modal-container
-//	.col-1
-//		+box
-//		+space($start)
-//		+w100
-//		.col-item
-//			+flex
-//			margin: 0 0px 20px
-//			width: 100%
-//			min-width: 100%
-//			max-width: 100%
+//    .col-1
+//        +box
+//        +space($start)
+//        +w100
+//        .col-item
+//            +flex
+//            margin: 0 0px 20px
+//            width: 100%
+//            min-width: 100%
+//            max-width: 100%
 //
-//	.col-2
-//		+box
-//		+space($bet)
-//		+w100
-//		.col-item
-//			flex: 0 1 49%
-//			+m0
+//    .col-2
+//        +box
+//        +space($bet)
+//        +w100
+//        .col-item
+//            flex: 0 1 49%
+//            +m0
 //
 //
-//	.col-3
-//		+box
-//		+space($start)
-//		+align
-//		+w100
-//		.col-item
-//			+flex
-//			margin: 0 10px 20px
-//			width: 30.5%
-//			min-width: 30.5%
-//			max-width: 30.5%
+//    .col-3
+//        +box
+//        +space($start)
+//        +align
+//        +w100
+//        .col-item
+//            +flex
+//            margin: 0 10px 20px
+//            width: 30.5%
+//            min-width: 30.5%
+//            max-width: 30.5%
 
 $columns: 12 !default
 $column-width: 4em !default
@@ -78,195 +78,196 @@ $support-old-ie: false !default
 
 
 
-=grid
-	text-align: justify !important
-	text-justify: distribute-all-lines
-	font-size: 0 !important
+=grid($gutter: 0)
+    text-align: justify !important
+    text-justify: distribute-all-lines
+    font-size: $gutter !important
 
-	& > *
-		text-align: left
-		font-size: medium
+    & > *
+        text-align: left
+        font-size: medium
 
-	&:after
-		content: ''
-		display: inline-block
-		width: 100%
+    &:after
+        content: ''
+        display: inline-block
+        width: 100%
 
-=grid-center
-	text-align: center !important
-	text-justify: distribute-all-lines
-	font-size: 0 !important
+=grid-center($gutter: 0)
+    text-align: center !important
+    text-justify: distribute-all-lines
+    font-size: $gutter !important
 
-	& > *
-		text-align: left
-		font-size: medium
+    & > *
+        text-align: left
+        //        font-size: medium
 
-	&:after
-		content: ''
-		display: inline-block
-		width: 100%
+    &:after
+        content: ''
+        display: inline-block
+        width: 100%
 
-=grid-left
-	text-align: left !important
-	text-justify: distribute-all-lines
-	font-size: 0 !important
+=grid-left($gutter: 0)
+    text-align: left !important
+    text-justify: distribute-all-lines
+    font-size: $gutter !important
 
-	& > *
-		text-align: left
-		font-size: medium
+    & > *
+        text-align: left
+        font-size: medium
 
-	&:after
-		content: ''
-		display: inline-block
-		width: 100%
+    &:after
+        content: ''
+        display: inline-block
+        width: 100%
 
 @if $support-old-ie
-	.lt-ie8 &
-		zoom: 1
+    .lt-ie8 &
+        zoom: 1
 
 =grid-cell
-	vertical-align: top
-	display: inline-block
-	width: 100%
+    vertical-align: top
+    display: inline-block
+    width: 100%
 
 @if $support-old-ie
-	.lt-ie8 &
-		display: inline
+    .lt-ie8 &
+        display: inline
 
 //@function grid-span($cols, $total: $columns)
-//	@return ($column-width * $cols + $gutter-width * ($cols - 1)) / ($column-width * $total + $gutter-width * ($total - 1)) * 100%
+//    @return ($column-width * $cols + $gutter-width * ($cols - 1)) / ($column-width * $total + $gutter-width * ($total - 1)) * 100%
 //
 //@function grid-xt($cols, $total: $columns)
-//	@return ($column-width + $gutter-width) * $cols / ($column-width * $total + $gutter-width * ($total - 1)) * 100%
+//    @return ($column-width + $gutter-width) * $cols / ($column-width * $total + $gutter-width * ($total - 1)) * 100%
 //
 //@mixin grid-push($cols, $total: $columns)
-//	left: grid-xt($cols, $total)
+//    left: grid-xt($cols, $total)
 //
 //@mixin grid-pull($cols, $total: $columns)
-//	left: grid-xt(-$cols, $total)
+//    left: grid-xt(-$cols, $total)
 //
 //@mixin grid-prepend($cols, $total: $columns)
-//	margin-left: grid-xt($cols, $total)
+//    margin-left: grid-xt($cols, $total)
 //
 //@mixin grid-append($cols, $total: $columns)
-//	margin-right: grid-xt($cols, $total)
-	
-.grid 
-	+grid
+//    margin-right: grid-xt($cols, $total)
+
+.grid
+    +grid
 
 //.col-1-1
-//	+grid-cell
-//	width: 100%
-//	
+//    +grid-cell
+//    width: 100%
+//
 //.col-2-2
-//	+grid-cell
-//	width: 48.344371%
-//	
+//    +grid-cell
+//    width: 48.344371%
+//
 //.col-3-3
-//	+grid-cell
-//	width: 31.125828%
-//	
+//    +grid-cell
+//    width: 31.125828%
+//
 //.col-3-1
-//	+grid-cell
-//	width: 22.516556%
-	
+//    +grid-cell
+//    width: 22.516556%
+
 .col
-	vertical-align: top
-	display: inline-block
+    vertical-align: top
+    display: inline-block
 
 .col-1
-	+grid-cell
-	width: 5.298013%
-	
+    +grid-cell
+    width: 5.298013%
+
 .col-2
-	+grid-cell
-	width: 13.907285%
-	
+    +grid-cell
+    width: 13.907285%
+
 .col-3
-	+grid-cell
-	width: 22.516556%
-	
+    +grid-cell
+    width: 22.516556%
+
 .col-4
-	+grid-cell
-	width: 31.125828%
-	
+    +grid-cell
+    width: 31.125828%
+
 .col-5
-	+grid-cell
-	width: 39.735099%
-	
+    +grid-cell
+    width: 39.735099%
+
 .col-6
-	+grid-cell
-	width: 48.344371%
-	
+    +grid-cell
+    width: 48.344371%
+
 .col-7
-	+grid-cell
-	width: 56.953642%
-	
+    +grid-cell
+    width: 56.953642%
+
 .col-8
-	+grid-cell
-	width: 65.562914%
-	
+    +grid-cell
+    width: 65.562914%
+
 .col-9
-	+grid-cell
-	width: 74.172185%
+    +grid-cell
+    width: 74.172185%
 
 .col-10
-	+grid-cell
-	width: 82.781457%
-	
+    +grid-cell
+    width: 82.781457%
+
 .col-11
-	+grid-cell
-	width: 91.390728%
+    +grid-cell
+    width: 91.390728%
 
 =col
-	vertical-align: top
-	display: inline-block
+    vertical-align: top
+    display: inline-block
 
 =col-1
-	+grid-cell
-	width: 5.298013%
-	
+    +grid-cell
+    width: 5.298013%
+
 =col-2
-	+grid-cell
-	width: 13.907285%
-	
+    +grid-cell
+    width: 48.344371%
+
+
 =col-3
-	width: 31.125828%
-	
+    width: 31.125828%
+
 =col-4
-	+grid-cell
-	width: 22.516556%
-	
+    +grid-cell
+    width: 22.516556%
+
 =col-5
-	+grid-cell
-	width: 39.735099%
-	
+    +grid-cell
+    width: 39.735099%
+
 =col-6
-	+grid-cell
-	width: 48.344371%
-	
+    +grid-cell
+    width: 13.907285%
+
 =col-7
-	+grid-cell
-	width: 56.953642%
-	
+    +grid-cell
+    width: 56.953642%
+
 =col-8
-	+grid-cell
-	width: 65.562914%
-	
+    +grid-cell
+    width: 65.562914%
+
 =col-9
-	+grid-cell
-	width: 74.172185%
+    +grid-cell
+    width: 74.172185%
 
 =col-10
-	+grid-cell
-	width: 82.781457%
-	
-=col-11
-	+grid-cell
-	width: 91.390728%
-	
-	
+    +grid-cell
+    width: 82.781457%
 
-	
+=col-11
+    +grid-cell
+    width: 91.390728%
+
+
+
+
 
 

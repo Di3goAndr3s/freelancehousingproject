@@ -26,8 +26,8 @@ $orange: $color3
 $green: $color5
 
 //$Gray
-$gray: #555
-$gray-light: $gray + 100
+$gray: #F6F6F6
+$gray-light: #777776
 $gray-dark: $gray - 100
 $gray-font: $gray - 30
 
@@ -42,7 +42,7 @@ $purple: #597D9D
 $pink: #F06560
 
 // Black
-$black: #1B1B1B
+$black: #262626
 $black-light: #333
 $black-dark: #000
 
@@ -52,25 +52,25 @@ $white: #ffffff
 
 //COLORS MIXINS
 =gray()
-	color: $gray
+    color: $gray
 
 =white()
-	color: $white
+    color: $white
 
 =black
-	color: $black
+    color: $black
 
 =bgWhite($opacity:1)
-	background: rgba(255,255,255,$opacity)
+    background: rgba(255,255,255,$opacity)
 
 =bgBlack($opacity:1)
-	background: rgba(0,0,0,$opacity)
+    background: rgba(0,0,0,$opacity)
 
 
 
 //Gradient
 =degra
-	+gradient(top,#fff, 10%, #f9f9f9, 80%)
-	
+    +gradient(top,#fff, 10%, #f9f9f9, 80%)
+
 $primary: $pink
 $secundary: #0060aa

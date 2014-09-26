@@ -1,68 +1,113 @@
 /*@header*/
 
 header
-	+w100
-	height: 320px
-	+bg(url('../images/bg-banner.jpg'))
-	+bs(cover)
-	+bp(center center)
-	.wrapper
-		+grid-left
-		+b1
+    +w100
+    height: 320px
+    +bg(url('../images/bg-banner.jpg'))
+    +bs(cover)
+    +bp(center center)
+    > .wrapper
+        +grid-left
+    figure
+        +col
+        width: 132px
+        margin: 100px 0 0 200px
+        img
+            border: 6px solid $white
+            +s100
+            +radius
 
-	figure
-		+col
-		width: 132px
-		margin: 100px 0 0 200px
-		img
-			border: 6px solid $white
-			+s100
-			+radius
-
-	.contact-data
-		+col
-		+wauto
-		margin: 100px 0 0 20px
-		+white
-		hgroup
-			h1, 
-			h2
-				+fs(4, 100%, 700)
-			h2
-				+fw(400)
-		span
-			+bg($black)
-			+radius
-			+size(30px)
-			+lh(28px)
-			+tCenter
-			+left
-			clear: left
-			+mt(5px)
-		p
-			+fs(2, 30px, 400)
-			+left
-			+ti(10px)
-			+mt(5px)
+    .contact-data
+        +col
+        +wauto
+        margin: 100px 0 0 20px
+        +white
+        hgroup
+            h1,
+            h2
+                +fs(4, 100%, 700)
+            h2
+                +fw(400)
+        span
+            +bg($black)
+            +radius
+            +size(30px)
+            +lh(28px)
+            +tCenter
+            +left
+            clear: left
+            +mt(5px)
+        p
+            +fs(2, 30px, 400)
+            +left
+            +ti(10px)
+            margin: 5px 0 0
 
 nav
-	+bg($color)
-	+b5
-	ul
-		+grid-center
-		+b1
-		+page
-		height: 70px
-		li
-			+col
-			+b2
-			+col-3
-			a
-				+b3
-				+white
-				+block
-				+lh(70px)
-				+tCenter
-				+upper
-				+fs(2, 70px, 700)
-				
+    +bg($color)
+    ul
+        +grid
+        +page
+        li
+            +col
+            +col-3
+            a
+                +white
+                +block
+                +tCenter
+                +upper
+                +fs(1.8, 60px, 700)
+                +noUnder
+                +transition(.2s)
+                +hover
+                    +under
+
+main
+    +bg($gray)
+    > .wrapper
+        +b4
+        .featured-left
+            +mt(50px)
+            span
+                +bg($black)
+                +radius
+                +size(78px)
+                +tCenter
+                +centered
+                +block
+                +white
+                i
+                    +lh(78px)
+
+            h3
+
+                +fs(2, 100%, 400)
+                +upper
+                +mb(10px)
+
+            p
+                +fs(1.6, 110%, 400)
+                +co($gray-light)
+
+        .featured-right
+            +mt(50px)
+            figure
+                +tCenter
+                figcaption
+                    +fs(1.6, 110%, 700)
+                    +co($gray-light)
+                    +mt(10px)
+
+.property
+    +mt(90px)
+    h3
+        +b1
+        strong
+            +b2
+        span
+            +b4
+
+
+
+
+

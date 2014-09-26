@@ -1,7 +1,45 @@
 include partials/main
 doctype html
 hmtl(lang="es")
-	+head('Inicio')
-	body(class='#{color}')
-		+header
-		+main-menu
+    +head('Inicio')
+    body(class='#{color}')
+        header
+            //-        img(src="assets/images/bg-banner.jpg")
+            .wrapper
+                figure
+                    img(src="assets/images/agente.jpg")
+                .contact-data
+                    hgroup
+                        h1 #{name}
+                        h2 #{rol}
+                    span
+                        +icon('mobile','lg')
+                    p #{mobil}
+                    span
+                        +icon('phone','')
+                    p #{phone}
+                    span
+                        +icon('envelope-o','')
+                    p #{mail}
+        +main-menu
+        main
+            .wrapper.grid.b4
+                .featured-left.grid.col-8.b3
+                    .col-2.b2
+                        span
+                            +icon('inbox','3x')
+                    .col-10.b1
+                        h3 Consigna tus muebles conmigo
+                        +paragraph-mini
+                        +button('Contactar ahora')
+
+                .featured-right.col-4.b3
+                    figure
+                        img(src="assets/images/logotipo.jpg")
+                        figcaption
+                            | Perteneciente a Company Name release Agency
+             .wrapper
+                .property
+                    h3 Inmuebles
+                        strong 19
+                        span Inmuebles
