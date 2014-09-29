@@ -12,8 +12,12 @@
     <meta name="robots" content="All"/>
     <link rel="author" type="text/plain" href="humans.txt"/>
     <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="assets/css/libs/chosen.css"/>
     <link href="assets/css/main.css" rel="stylesheet" type="text/css"/>
-    <script src="assets/js/lib/jquery-1.11.0.min.js"></script>
+    <script src="assets/js/libs/jquery-1.11.1.min.js"></script>
+    <script src="assets/js/libs/chosen.jquery.js"></script>
+    <script src="assets/js/libs/jquery.easing.min.js"></script>
+    <script src="assets/js/libs/jquery.scrollTo.min.js"></script>
     <script src="assets/js/main.js"></script>
   </head>
   <body class="red">
@@ -33,31 +37,343 @@
     </header>
     <nav class="main-menu">
       <ul>
-        <li><a href="#">inmuebles</a></li>
-        <li><a href="#">proyectos</a></li>
-        <li><a href="#">contacto</a></li>
+        <li><a id="inmuebles" href="#">inmuebles</a></li>
+        <li><a id="proyectos" href="#">proyectos</a></li>
+        <li><a id="contacto" href="#">contacto</a></li>
       </ul>
     </nav>
     <main>
-      <div class="wrapper grid b4">
-        <div class="featured-left grid col-8 b3">
-          <div class="col-2 b2"><span><i class="fa fa-inbox fa-3x"></i></span></div>
-          <div class="col-10 b1">
+      <section class="featured grid">
+        <div class="featured-left grid col-8">
+          <div class="col-2"><span><i class="fa fa-inbox fa-3x"></i></span></div>
+          <div class="col-10">
             <h3>Consigna tus muebles conmigo</h3>
             <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur tenetur autem sunt sapiente repudiandae, nesciunt, mollitia vitae, quas numquam veritatis doloribus maiores incidunt.</p><a title="" alt="" href="#" class="button">Contactar ahora</a>
           </div>
         </div>
-        <div class="featured-right col-4 b3">
-          <figure><img src="assets/images/logotipo.jpg">
+        <div class="featured-right col-4">
+          <figure class="company-branding"><img src="assets/images/logotipo.jpg"/>
             <figcaption>Perteneciente a Company Name release Agency</figcaption>
           </figure>
         </div>
-      </div>
-      <div class="wrapper">
-        <div class="property">
-          <h3>Inmuebles<strong>19</strong><span>Inmuebles</span></h3>
+      </section>
+      <section id="inmuebles-anchor" class="properties">
+        <h3>Inmuebles<span><strong>19</strong> inmuebles</span></h3>
+        <ul class="tabs">
+          <li><a href="#" class="active">Ver todos</a></li>
+          <li><a href="#">Arriendo</a></li>
+          <li><a href="#">Ventas</a></li>
+        </ul>
+        <div class="tabs-container">
+          <div class="filters grid">
+            <div class="col-2">
+              <select data-placeholder="Tipo de inmueble" class="chosen">
+                <option value="">Tipo de inmueble
+                  <optgroup label="Lorem Ipsum">
+                    <option value="">Lorem</option>
+                    <option value="">Lorem Ipsum</option>
+                    <option value="">Lorem Ipsum</option>
+                  </optgroup>
+                  <optgroup label="Lorem Ipsum">
+                    <option value="">Lorem</option>
+                    <option value="">Lorem Ipsum</option>
+                    <option value="">Lorem Ipsum</option>
+                  </optgroup>
+                </option>
+              </select>
+            </div>
+            <div class="col-2">
+              <select data-placeholder="No habitaciones" class="chosen">
+                <option value="">No habitaciones
+                  <optgroup label="Lorem Ipsum">
+                    <option value="">Lorem</option>
+                    <option value="">Lorem Ipsum</option>
+                    <option value="">Lorem Ipsum</option>
+                  </optgroup>
+                  <optgroup label="Lorem Ipsum">
+                    <option value="">Lorem</option>
+                    <option value="">Lorem Ipsum</option>
+                    <option value="">Lorem Ipsum</option>
+                  </optgroup>
+                </option>
+              </select>
+            </div>
+            <div class="col-2">
+              <select data-placeholder="Area minima" class="chosen">
+                <option value="">Area minima
+                  <optgroup label="Lorem Ipsum">
+                    <option value="">Lorem</option>
+                    <option value="">Lorem Ipsum</option>
+                    <option value="">Lorem Ipsum</option>
+                  </optgroup>
+                  <optgroup label="Lorem Ipsum">
+                    <option value="">Lorem</option>
+                    <option value="">Lorem Ipsum</option>
+                    <option value="">Lorem Ipsum</option>
+                  </optgroup>
+                </option>
+              </select>
+            </div>
+            <div class="col-2">
+              <select data-placeholder="Precio mínimo" class="chosen">
+                <option value="">Precio mínimo
+                  <optgroup label="Lorem Ipsum">
+                    <option value="">Lorem</option>
+                    <option value="">Lorem Ipsum</option>
+                    <option value="">Lorem Ipsum</option>
+                  </optgroup>
+                  <optgroup label="Lorem Ipsum">
+                    <option value="">Lorem</option>
+                    <option value="">Lorem Ipsum</option>
+                    <option value="">Lorem Ipsum</option>
+                  </optgroup>
+                </option>
+              </select>
+            </div>
+            <div class="col-2">
+              <select data-placeholder="No Baños" class="chosen">
+                <option value="">No Baños
+                  <optgroup label="Lorem Ipsum">
+                    <option value="">Lorem</option>
+                    <option value="">Lorem Ipsum</option>
+                    <option value="">Lorem Ipsum</option>
+                  </optgroup>
+                  <optgroup label="Lorem Ipsum">
+                    <option value="">Lorem</option>
+                    <option value="">Lorem Ipsum</option>
+                    <option value="">Lorem Ipsum</option>
+                  </optgroup>
+                </option>
+              </select>
+            </div>
+            <div class="col-2">
+              <select data-placeholder="No garajes" class="chosen">
+                <option value="">No garajes
+                  <optgroup label="Lorem Ipsum">
+                    <option value="">Lorem</option>
+                    <option value="">Lorem Ipsum</option>
+                    <option value="">Lorem Ipsum</option>
+                  </optgroup>
+                  <optgroup label="Lorem Ipsum">
+                    <option value="">Lorem</option>
+                    <option value="">Lorem Ipsum</option>
+                    <option value="">Lorem Ipsum</option>
+                  </optgroup>
+                </option>
+              </select>
+            </div>
+          </div>
+          <div class="container-propierty">
+            <article class="propierty">
+              <figure><img src="assets/images/propierty.jpg"/><span class="adress">Calle 134 # 44 - 16</span><span class="badge">Venta</span></figure>
+              <h1>Hermoso apartemento con vista a los cerros con 3 baños</h1>
+              <div class="price">$2.500.000.000</div>
+              <div class="status"><span class="m2">130</span><span class="bathrooms">3</span><span class="rooms">4</span><span class="garage">2</span></div>
+            </article>
+            <article class="propierty">
+              <figure><img src="assets/images/propierty.jpg"/><span class="adress">Calle 134 # 44 - 16</span><span class="badge">Arriendo</span></figure>
+              <h1>Hermoso apartemento con vista a los cerros con 3 baños</h1>
+              <div class="price">$2.500.000.000</div>
+              <div class="status"><span class="m2">130</span><span class="bathrooms">3</span><span class="rooms">4</span><span class="garage">2</span></div>
+            </article>
+            <article class="propierty">
+              <figure><img src="assets/images/propierty.jpg"/><span class="adress">Calle 134 # 44 - 16</span><span class="badge">Venta</span></figure>
+              <h1>Hermoso apartemento con vista a los cerros con 3 baños</h1>
+              <div class="price">$2.500.000.000</div>
+              <div class="status"><span class="m2">130</span><span class="bathrooms">3</span><span class="rooms">4</span><span class="garage">2</span></div>
+            </article>
+            <article class="propierty">
+              <figure><img src="assets/images/propierty.jpg"/><span class="adress">Calle 134 # 44 - 16</span><span class="badge">Arriendo</span></figure>
+              <h1>Hermoso apartemento con vista a los cerros con 3 baños</h1>
+              <div class="price">$2.500.000.000</div>
+              <div class="status"><span class="m2">130</span><span class="bathrooms">3</span><span class="rooms">4</span><span class="garage">2</span></div>
+            </article>
+            <article class="propierty">
+              <figure><img src="assets/images/propierty.jpg"/><span class="adress">Calle 134 # 44 - 16</span><span class="badge">Venta</span></figure>
+              <h1>Hermoso apartemento con vista a los cerros con 3 baños</h1>
+              <div class="price">$2.500.000.000</div>
+              <div class="status"><span class="m2">130</span><span class="bathrooms">3</span><span class="rooms">4</span><span class="garage">2</span></div>
+            </article>
+            <article class="propierty">
+              <figure><img src="assets/images/propierty.jpg"/><span class="adress">Calle 134 # 44 - 16</span><span class="badge">Arriendo</span></figure>
+              <h1>Hermoso apartemento con vista a los cerros con 3 baños</h1>
+              <div class="price">$2.500.000.000</div>
+              <div class="status"><span class="m2">130</span><span class="bathrooms">3</span><span class="rooms">4</span><span class="garage">2</span></div>
+            </article>
+            <article class="propierty">
+              <figure><img src="assets/images/propierty.jpg"/><span class="adress">Calle 134 # 44 - 16</span><span class="badge">Venta</span></figure>
+              <h1>Hermoso apartemento con vista a los cerros con 3 baños</h1>
+              <div class="price">$2.500.000.000</div>
+              <div class="status"><span class="m2">130</span><span class="bathrooms">3</span><span class="rooms">4</span><span class="garage">2</span></div>
+            </article>
+            <article class="propierty">
+              <figure><img src="assets/images/propierty.jpg"/><span class="adress">Calle 134 # 44 - 16</span><span class="badge">Arriendo</span></figure>
+              <h1>Hermoso apartemento con vista a los cerros con 3 baños</h1>
+              <div class="price">$2.500.000.000</div>
+              <div class="status"><span class="m2">130</span><span class="bathrooms">3</span><span class="rooms">4</span><span class="garage">2</span></div>
+            </article>
+            <article class="propierty">
+              <figure><img src="assets/images/propierty.jpg"/><span class="adress">Calle 134 # 44 - 16</span><span class="badge">Venta</span></figure>
+              <h1>Hermoso apartemento con vista a los cerros con 3 baños</h1>
+              <div class="price">$2.500.000.000</div>
+              <div class="status"><span class="m2">130</span><span class="bathrooms">3</span><span class="rooms">4</span><span class="garage">2</span></div>
+            </article>
+            <div class="pager-rounded">
+              <ul>
+                <li class="prev"><a><i class="fa fa-angle-left"></i></a></li>
+                <li class="first"><a class="active">1</a></li>
+                <li><a>2</a></li>
+                <li><a>3</a></li>
+                <li><a>4</a></li>
+                <li class="last"><a>5</a></li>
+                <li class="next"><a><i class="fa fa-angle-right"></i></a></li>
+              </ul>
+            </div>
+          </div>
         </div>
-      </div>
+      </section>
+      <section id="proyectos-anchor" class="new-projects grid">
+        <h4>Proyectos nuevos</h4>
+        <article class="col-6 grid">
+          <figure><img src="assets/images/propierty.jpg"/><img src="assets/images/logo-propierty.jpg" class="logo"/></figure>
+          <hgroup>
+            <h1>Parque empresarial occidente</h1>
+            <h2>Calle 134 # 34 - 17</h2>
+          </hgroup>
+          <div class="clear"></div>
+          <div class="new-project col-8">
+            <h3>El mejor proyecto del area con los mejores precios</h3>
+            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur tenetur autem sunt sapiente repudiandae, nesciunt, mollitia vitae, quas numquam veritatis doloribus maiores incidunt, odio dolor ipsum commodi quibusdam impedit soluta.  Lorem ipsum dolor sit amet.  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos fuga exercitationem, odit quis illo.</p>
+          </div>
+          <div class="price col-4"><span>Desde</span>$ 1.200.000
+            <figure class="construction">
+              <figcaption>Constructora</figcaption><img src="assets/images/constructora.jpg"/>
+            </figure>
+          </div>
+          <ul class="others-projects">
+            <li>
+              <figure><img src="assets/images/propierty.jpg"/></figure>
+              <div class="prices">Desde $2.500.000
+                <p> Apartamento</p>
+              </div>
+              <div class="status"><span class="m2">130</span><span class="bathrooms">3</span><span class="rooms">4</span><span class="garage">2</span></div>
+            </li>
+            <li>
+              <figure><img src="assets/images/propierty.jpg"/></figure>
+              <div class="prices">Desde $2.500.000
+                <p> Apartamento</p>
+              </div>
+              <div class="status"><span class="m2">130</span><span class="bathrooms">3</span><span class="rooms">4</span><span class="garage">2</span></div>
+            </li>
+            <li>
+              <figure><img src="assets/images/propierty.jpg"/></figure>
+              <div class="prices">Desde $2.500.000
+                <p> Apartamento</p>
+              </div>
+              <div class="status"><span class="m2">130</span><span class="bathrooms">3</span><span class="rooms">4</span><span class="garage">2</span></div>
+            </li>
+            <li>
+              <figure><img src="assets/images/propierty.jpg"/></figure>
+              <div class="prices">Desde $2.500.000
+                <p> Apartamento</p>
+              </div>
+              <div class="status"><span class="m2">130</span><span class="bathrooms">3</span><span class="rooms">4</span><span class="garage">2</span></div>
+            </li>
+          </ul>
+        </article>
+        <article class="col-6 grid">
+          <figure><img src="assets/images/propierty.jpg"/><img src="assets/images/logo-propierty.jpg" class="logo"/></figure>
+          <hgroup>
+            <h1>Parque empresarial occidente</h1>
+            <h2>Calle 134 # 34 - 17</h2>
+          </hgroup>
+          <div class="clear"></div>
+          <div class="new-project col-8">
+            <h3>El mejor proyecto del area con los mejores precios</h3>
+            <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur tenetur autem sunt sapiente repudiandae, nesciunt, mollitia vitae, quas numquam veritatis doloribus maiores incidunt, odio dolor ipsum commodi quibusdam impedit soluta.  Lorem ipsum dolor sit amet.  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos fuga exercitationem, odit quis illo.</p>
+          </div>
+          <div class="price col-4"><span>Desde</span>$ 1.200.000
+            <figure class="construction">
+              <figcaption>Constructora</figcaption><img src="assets/images/constructora.jpg"/>
+            </figure>
+          </div>
+          <ul class="others-projects">
+            <li>
+              <figure><img src="assets/images/propierty.jpg"/></figure>
+              <div class="prices">Desde $2.500.000
+                <p> Apartamento</p>
+              </div>
+              <div class="status"><span class="m2">130</span><span class="bathrooms">3</span><span class="rooms">4</span><span class="garage">2</span></div>
+            </li>
+            <li>
+              <figure><img src="assets/images/propierty.jpg"/></figure>
+              <div class="prices">Desde $2.500.000
+                <p> Apartamento</p>
+              </div>
+              <div class="status"><span class="m2">130</span><span class="bathrooms">3</span><span class="rooms">4</span><span class="garage">2</span></div>
+            </li>
+            <li>
+              <figure><img src="assets/images/propierty.jpg"/></figure>
+              <div class="prices">Desde $2.500.000
+                <p> Apartamento</p>
+              </div>
+              <div class="status"><span class="m2">130</span><span class="bathrooms">3</span><span class="rooms">4</span><span class="garage">2</span></div>
+            </li>
+            <li>
+              <figure><img src="assets/images/propierty.jpg"/></figure>
+              <div class="prices">Desde $2.500.000
+                <p> Apartamento</p>
+              </div>
+              <div class="status"><span class="m2">130</span><span class="bathrooms">3</span><span class="rooms">4</span><span class="garage">2</span></div>
+            </li>
+          </ul>
+        </article>
+      </section>
+      <section id="contacto-anchor" class="agent grid">
+        <div class="col-6">
+          <h3>Contacto</h3>
+          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur tenetur autem sunt sapiente repudiandae, nesciunt, mollitia vitae, quas numquam veritatis doloribus maiores incidunt.</p>
+          <form>
+            <div class="form-item">
+              <label>Nombre:<strong>*</strong></label>
+              <input type="text" title="Nombre"/>
+            </div>
+            <div class="form-item">
+              <label>Email:<strong>*</strong></label>
+              <input type="text" title="Email"/>
+            </div>
+            <div class="form-item">
+              <label>Télefono:<strong>*</strong></label>
+              <input type="text" title="Télefono"/>
+            </div>
+            <div class="form-item">
+              <label>Mensaje:</label>
+              <textarea title="Mensaje"></textarea>
+            </div>
+            <input type="submit" title="Enviar" class="button big"/>
+          </form>
+        </div>
+        <article class="col-6">
+          <h3>Acerca de mí</h3>
+          <figure class="about"><img src="assets/images/agente.jpg"></figure>
+          <div class="contact-data">
+            <hgroup>
+              <h1>Antonia Garcia Perez</h1>
+              <h2>Agente Inmobiliario</h2>
+            </hgroup><span><i class="fa fa-mobile fa-lg"></i></span>
+            <p>314 4598126</p><span><i class="fa fa-phone fa-1x"></i></span>
+            <p>57 + 1 2425639</p><span><i class="fa fa-envelope-o fa-1x"></i></span>
+            <p>agente@ubicala.com</p>
+          </div>
+          <p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequuntur tenetur autem sunt sapiente repudiandae, nesciunt, mollitia vitae, quas numquam veritatis doloribus maiores incidunt, odio dolor ipsum commodi quibusdam impedit soluta.  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam odio consequuntur dolor rerum recusandae vitae officia pariatur magni tempore cupiditate odit, tempora deserunt quia impedit aliquam a quasi eos at!  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed nemo omnis debitis quibusdam, accusantium qui amet consequuntur officia architecto at saepe consequatur laudantium quaerat illo cupiditate odio reiciendis fugiat eaque.</p>
+          <figure class="company-branding"><img src="assets/images/logotipo.jpg"/>
+            <figcaption>Perteneciente a Company Name release Agency</figcaption>
+          </figure>
+        </article>
+      </section>
     </main>
+    <footer>
+      <div class="wrapper"></div>
+    </footer>
   </body>
 </hmtl>

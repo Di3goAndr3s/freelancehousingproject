@@ -120,6 +120,10 @@ $support-old-ie: false !default
         display: inline-block
         width: 100%
 
+.grid-left
+    +grid-left(184px)
+
+
 @if $support-old-ie
     .lt-ie8 &
         zoom: 1
@@ -232,11 +236,13 @@ $support-old-ie: false !default
 
 
 =col-3
-    width: 31.125828%
+    +grid-cell
+    width: 22.516556%
+
 
 =col-4
     +grid-cell
-    width: 22.516556%
+    width: 31.125828%
 
 =col-5
     +grid-cell

@@ -23,23 +23,95 @@ hmtl(lang="es")
                     p #{mail}
         +main-menu
         main
-            .wrapper.grid.b4
-                .featured-left.grid.col-8.b3
-                    .col-2.b2
+            section.featured.grid
+                .featured-left.grid.col-8
+                    .col-2
                         span
                             +icon('inbox','3x')
-                    .col-10.b1
+                    .col-10
                         h3 Consigna tus muebles conmigo
                         +paragraph-mini
                         +button('Contactar ahora')
 
-                .featured-right.col-4.b3
-                    figure
-                        img(src="assets/images/logotipo.jpg")
-                        figcaption
-                            | Perteneciente a Company Name release Agency
-             .wrapper
-                .property
-                    h3 Inmuebles
+                .featured-right.col-4
+                    +company-branding
+
+            section.properties#inmuebles-anchor
+                h3 Inmuebles
+                    span
                         strong 19
-                        span Inmuebles
+                        |  inmuebles
+                +tabs
+                .tabs-container
+                    .filters.grid
+                        .col-2
+                            +select('Tipo de inmueble')
+                        .col-2
+                            +select('No habitaciones')
+                        .col-2
+                            +select('Area minima')
+                        .col-2
+                            +select('Precio mínimo')
+                        .col-2
+                            +select('No Baños')
+                        .col-2
+                            +select('No garajes')
+                    .container-propierty
+                        +propierty
+                        +propierty('Arriendo')
+                        +propierty
+                        +propierty('Arriendo')
+                        +propierty
+                        +propierty('Arriendo')
+                        +propierty
+                        +propierty('Arriendo')
+                        +propierty
+                        +pager-rounded
+
+            section.new-projects.grid#proyectos-anchor
+                h4 Proyectos nuevos
+                +new-project
+                +new-project
+
+            section.agent.grid#contacto-anchor
+                .col-6
+                    h3 Contacto
+                    +paragraph-mini
+                    form
+                        +input('Nombre')
+                        +input('Email')
+                        +input('Télefono')
+                        +textarea('Mensaje')
+                        +submit('Enviar', 'big')
+                article.col-6
+                    h3 Acerca de mí
+                    figure.about
+                        img(src="assets/images/agente.jpg")
+                    .contact-data
+                        hgroup
+                            h1 #{name}
+                            h2 #{rol}
+                        span
+                            +icon('mobile','lg')
+                        p #{mobil}
+                        span
+                            +icon('phone','')
+                        p #{phone}
+                        span
+                            +icon('envelope-o','')
+                        p #{mail}
+                    +paragraph
+                    +company-branding
+        footer
+            .wrapper
+
+
+
+
+
+
+
+
+
+
+

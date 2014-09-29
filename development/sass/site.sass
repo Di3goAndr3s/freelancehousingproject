@@ -1,3 +1,6 @@
+body
+    +bg($gray)
+
 /*@header*/
 
 header
@@ -5,7 +8,7 @@ header
     height: 320px
     +bg(url('../images/bg-banner.jpg'))
     +bs(cover)
-    +bp(center center)
+    +bp(bottom center)
     > .wrapper
         +grid-left
     figure
@@ -46,11 +49,11 @@ header
 nav
     +bg($color)
     ul
-        +grid
         +page
+        +tCenter
         li
-            +col
-            +col-3
+            width: 20%
+            +inline-block
             a
                 +white
                 +block
@@ -59,53 +62,312 @@ nav
                 +fs(1.8, 60px, 700)
                 +noUnder
                 +transition(.2s)
-                +hover
-                    +under
+
 
 main
-    +bg($gray)
-    > .wrapper
-        +b4
-        .featured-left
-            +mt(50px)
-            span
-                +bg($black)
-                +radius
-                +size(78px)
-                +tCenter
-                +centered
-                +block
-                +white
-                i
-                    +lh(78px)
-
-            h3
-
-                +fs(2, 100%, 400)
-                +upper
-                +mb(10px)
-
-            p
-                +fs(1.6, 110%, 400)
-                +co($gray-light)
-
-        .featured-right
-            +mt(50px)
-            figure
-                +tCenter
-                figcaption
-                    +fs(1.6, 110%, 700)
-                    +co($gray-light)
-                    +mt(10px)
-
-.property
-    +mt(90px)
-    h3
-        +b1
-        strong
-            +b2
+    +page
+    .featured-left
+        +mt(50px)
         span
-            +b4
+            +bg($black)
+            +radius
+            +size(78px)
+            +tCenter
+            +centered
+            +block
+            +white
+            i
+                +lh(78px)
+
+        h3
+
+            +fs(2, 100%, 400)
+            +upper
+            +mb(10px)
+
+        p
+            +fs(1.6, 110%, 400)
+            +co($gray-light)
+
+    .featured-right
+        +mt(50px)
+
+.company-branding
+    +tCenter
+    > figcaption
+        +fs(1.6, 110%, 700)
+        +co($gray-light)
+        +mt(10px)
+        img
+            +size(175px 80px)
+
+
+
+.properties
+    +mt(40px)
+    +pt(50px)
+    +bt(thin solid $gray - 20)
+    h3
+        +fs(3, 100%, 400)
+        +upper
+        +co($gray-dark)
+        span
+            +capi
+            +inline-block
+            +ti(20px)
+            +fs(1.8, 200%, 400)
+
+    .tabs-container
+        +w100
+        +mt(20px)
+        .filters
+            +w100
+            +mb(20px)
+
+.chosen-container-single
+    width: 100% $i
+    .chosen-single
+        border: thin solid $gray - 10
+        height: 40px
+        +co($gray-dark)
+        +fs(1.4, 38px, 400)
+
+.chosen-container .chosen-results li.highlighted
+    +bg($color)
+
+
+
+.container-propierty
+    @extend .grid-left
+    max-height: 1380px
+    +bb(thin solid $gray - 20)
+    +noScroll
+    article.propierty
+        +col-4
+        +mb(20px)
+        +bg(white)
+        +pb(20px)
+
+        figure
+            height: 220px
+            +block
+            +w100
+            img
+                +s100
+        .adress
+            margin: 10px 0 0 10px
+            +fs(1.4, 130%, 400)
+            +left
+            +co($gray-dark)
+
+
+        .badge
+            +right
+            +bg($color)
+            padding: 5px
+            +radius(25px)
+            +white
+            margin: 10px 10px 0 0
+            +fs(1.2, 100%, 300)
+            +upper
+        h1
+            +block
+            +clear
+            padding: 10px
+            +fs(1.8, 110%, 700)
+            +co($gray-dark)
+        .price
+            +tCenter
+            +co($color)
+            +fs(2.2, 110%, 400)
+        .status
+            +tCenter
+            margin: 10px 0 0
+            span
+                +inline-block
+                padding: 30px 0 0
+                width: 40px
+            .m2
+                +bg(url('../images/icon-m2.png') top center $nr)
+            .bathrooms
+                +bg(url('../images/icon-shower.png') top center $nr)
+            .rooms
+                +bg(url('../images/icon-bed.png') top center $nr)
+            .garage
+                +bg(url('../images/icon-car.png') top center $nr)
+
+
+section.new-projects
+    +bb(thin solid $gray - 20)
+    +pb(60px)
+    h4
+        +fs(3, 100%, 400)
+        +upper
+        +co($gray-dark)
+        margin: 30px 0
+    article
+        +bg(white)
+        > figure
+            +w100
+            img
+                max-height: 205px
+                +s100
+            img.logo
+                +size(100px 80px)
+                +left
+                margin: -60px 0 0 20px
+                +relative
+                +z(99)
+                border: 1px solid $gray - 10
+        hgroup
+            +right
+            +co(white)
+            margin: -50px 20px 0 0
+            width: 70%
+            +relative
+            +z(99)
+            h1
+                +upper
+                +fs(2, 110%, 700)
+            h2
+                +fs(1.6, 110%, 400)
+        h3
+            padding: 10px 20px
+            +block
+            +clear
+            +fs(1.6, 110%, 700)
+            +co($gray-dark)
+        p
+            padding: 0 20px
+            +fs(1.4, 110%, 400)
+            +co($gray-dark)
+
+        .price
+            +tCenter
+            +co($color)
+            +fs(2.2, 110%, 400)
+            > span
+                padding: 10px 0 0
+                +fs(1.4, 110%, 700)
+                +co($gray-dark)
+                +tCenter
+                +block
+        figure.construction
+            +mt(40px)
+            figcaption
+                +mb(5px)
+                +fs(1.4, 110%, 400)
+                +co($gray-dark)
+                +tCenter
+                +block
+            img
+                border: 1px solid $gray - 10
+                +size(146px 64px)
+
+ul.others-projects
+    +mt(20px)
+    li
+
+        +bt(1px solid $gray - 20)
+
+    figure
+        +inline-block
+        +noScroll
+        +size(60px 44px)
+        img
+            +s100
+    .prices
+        +inline-block
+        +co($color)
+        +fs(1.6, 130%, 400)
+        +ml(10px)
+        > p
+            +m0
+            +p0
+            +tLeft
+            +fs(1.4, 110%, 400)
+            +co($gray-dark)
+
+    .status
+        +right
+        span
+            +inline-block
+            padding: 0 10px 0 40px
+            height: 44px
+            +lh(44px)
+            +tCenter
+        .m2
+            +bg(url('../images/icon-m2.png') left center $nr)
+        .bathrooms
+            +bg(url('../images/icon-shower.png') left center $nr)
+        .rooms
+            +bg(url('../images/icon-bed.png') left center $nr)
+        .garage
+            +bg(url('../images/icon-car.png') left center $nr)
+
+
+
+.agent
+    +mt(40px)
+    h3
+        +fs(3, 100%, 400)
+        +upper
+        +co($gray-dark)
+        +mb(20px)
+    p
+        +fs(1.4, 160%, 400)
+        +co($gray-dark)
+        +mb(20px)
+
+    article
+        +pl(40px)
+        figure.about
+            +col
+            width: 132px
+            img
+                border: 6px solid $white
+                +s100
+                +radius
+
+        .contact-data
+            +col
+            +wauto
+            +black
+            +ml(20px)
+            hgroup
+                h1,
+                h2
+                    +fs(2.2, 100%, 700)
+                h2
+                    +fw(400)
+                    +mb(10px)
+            span
+                +bg($color)
+                +radius
+                +size(30px)
+                +lh(28px)
+                +tCenter
+                +left
+                clear: left
+                +mt(5px)
+                i
+                    +white
+            > p
+                +fs(1.6, 25px, 700)
+                +left
+                +ti(7px)
+                margin: 5px 0 0
+        > p
+            +fs(1.6, 150%, 400)
+            +mt(20px)
+
+footer
+    +bg(#343434)
+    +mt(40px)
+    height: 105px
+    .wrapper
+        +bg(url('../images/copyright.jpg') right center $nr)
+        height: 105px
 
 
 

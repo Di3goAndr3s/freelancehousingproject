@@ -11,9 +11,14 @@ mixin head(name)
         meta(name='robots', content='All')
         link(rel='author', type='text/plain', href='humans.txt')
         link(href='//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css', rel='stylesheet', type='text/css')
+        link(rel='stylesheet', href='assets/css/libs/chosen.css')
         link(href='assets/css/main.css', rel='stylesheet', type='text/css')
-        script(src='assets/js/lib/jquery-1.11.0.min.js')
+        script(src='assets/js/libs/jquery-1.11.1.min.js')
+        script(src='assets/js/libs/chosen.jquery.js')
+        script(src='assets/js/libs/jquery.easing.min.js')
+        script(src='assets/js/libs/jquery.scrollTo.min.js')
         script(src='assets/js/main.js')
+
 
 
 - color = color || 'red'
@@ -46,13 +51,100 @@ mixin header
 mixin main-menu
     nav.main-menu
         ul
-            each val in ['inmuebles', 'proyectos', 'contacto']
-                li
-                    a(href="#")= val
+            li
+                a#inmuebles(href="#") inmuebles
+            li
+                a#proyectos(href="#") proyectos
+            li
+                a#contacto(href="#") contacto
 
 mixin icon(icon,size)
     -icon = icon || ''
     -size = size || '1x'
     i(class='fa fa-#{icon} fa-#{size}')
+
+mixin tabs
+    ul.tabs
+        li
+            a.active(href="#") Ver todos
+        each val in ['Arriendo', 'Ventas']
+            li
+                a(href="#")= val
+
+
+mixin select(placeholder)
+    -placeholder = placeholder || ''
+    select.chosen(data-placeholder='#{placeholder}')
+        option(value='') #{placeholder}
+            optgroup(label='Lorem Ipsum')
+                option(value='') Lorem
+                option(value='') Lorem Ipsum
+                option(value='') Lorem Ipsum
+            optgroup(label='Lorem Ipsum')
+                option(value='') Lorem
+                option(value='') Lorem Ipsum
+                option(value='') Lorem Ipsum
+
+
+mixin propierty(status)
+    -status = status || 'Venta'
+    article.propierty
+        figure
+            img(src="assets/images/propierty.jpg")
+            span.adress Calle 134 # 44 - 16
+            span.badge #{status}
+        h1 Hermoso apartemento con vista a los cerros con 3 baños
+
+        .price $2.500.000.000
+        .status
+            span.m2 130
+            span.bathrooms 3
+            span.rooms 4
+            span.garage 2
+
+mixin other-project
+    li
+        figure
+            img(src="assets/images/propierty.jpg")
+        .prices
+            | Desde $2.500.000
+            p
+                |  Apartamento
+        .status
+            span.m2 130
+            span.bathrooms 3
+            span.rooms 4
+            span.garage 2
+
+mixin new-project
+    article.col-6.grid
+        figure
+            img(src="assets/images/propierty.jpg")
+            img.logo(src="assets/images/logo-propierty.jpg")
+        hgroup
+            h1 Parque empresarial occidente
+            h2 Calle 134 # 34 - 17
+        +clear
+        .new-project.col-8
+            h3 El mejor proyecto del area con los mejores precios
+            +paragraph-small
+        .price.col-4
+            span Desde
+            | $ 1.200.000
+            figure.construction
+                figcaption Constructora
+                img(src="assets/images/constructora.jpg")
+        ul.others-projects
+            +other-project
+            +other-project
+            +other-project
+            +other-project
+
+mixin company-branding
+    figure.company-branding
+        img(src="assets/images/logotipo.jpg")
+        figcaption
+            | Perteneciente a Company Name release Agency
+
 
 
