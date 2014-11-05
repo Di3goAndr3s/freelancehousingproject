@@ -1,8 +1,16 @@
-mixin head(name)
+- color = color || 'yellow'
+- name = name || 'Antonia Garcia Perez'
+- rol = rol || 'Agente Inmobiliario'
+- phone = phone || '57 + 1 2425639'
+- mobil = mobil || '314 4598126'
+- mail = mail || 'agente@ubicala.com'
+
+
+mixin head
     head
         meta(charset='utf-8')
         meta(name='viewport', content='width=device-width, initial-scale=1, maximum-scale=1')
-        title  #{name}
+        title #{name} - #{rol}
         link(rel='shortcut icon', type='image/x-icon', href='favicon.ico')
         meta(http-equiv='content-language', content='es')
         meta(http-equiv='pragma', content='No-Cache')
@@ -12,21 +20,18 @@ mixin head(name)
         link(rel='author', type='text/plain', href='humans.txt')
         link(href='//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css', rel='stylesheet', type='text/css')
         link(rel='stylesheet', href='assets/css/libs/chosen.css')
+        link(rel='stylesheet', href='assets/css/libs/jquery.bxslider.css')
         link(href='assets/css/main.css', rel='stylesheet', type='text/css')
         script(src='assets/js/libs/jquery-1.11.1.min.js')
         script(src='assets/js/libs/chosen.jquery.js')
         script(src='assets/js/libs/jquery.easing.min.js')
         script(src='assets/js/libs/jquery.scrollTo.min.js')
+        script(src='assets/js/libs/jquery.bxslider.min.js')
         script(src='assets/js/main.js')
 
 
 
-- color = color || 'red'
-- name = name || 'Antonia Garcia Perez'
-- rol = rol || 'Agente Inmobiliario'
-- phone = phone || '57 + 1 2425639'
-- mobil = mobil || '314 4598126'
-- mail = mail || 'agente@ubicala.com'
+
 
 mixin header
     header
@@ -88,12 +93,12 @@ mixin select(placeholder)
 
 mixin propierty(status)
     -status = status || 'Venta'
-    article.propierty
+    article.propierty.col-4
         figure
             img(src="assets/images/propierty.jpg")
             span.adress Calle 134 # 44 - 16
             span.badge #{status}
-        h1 Hermoso apartemento con vista a los cerros con 3 baños
+        a(href="interna.html") Hermoso apartemento con vista a los cerros con 3 baños
 
         .price $2.500.000.000
         .status
@@ -119,7 +124,7 @@ mixin other-project
 mixin new-project
     article.col-6.grid
         figure
-            img(src="assets/images/propierty.jpg")
+            +slider
             img.logo(src="assets/images/logo-propierty.jpg")
         hgroup
             h1 Parque empresarial occidente
@@ -147,4 +152,74 @@ mixin company-branding
             | Perteneciente a Company Name release Agency
 
 
+
+mixin slider
+    ul.slider
+        li
+            img(src="assets/images/propierty.jpg")
+        li
+            img(src="assets/images/propierty.jpg")
+        li
+            img(src="assets/images/propierty.jpg")
+        li
+            img(src="assets/images/propierty.jpg")
+
+mixin slider-thumbs
+    .sliders.grid
+        .sliderBig.col-9
+            ul
+                li
+
+                    img(alt='', src='assets/images/propierty.jpg', title="Sala Comedor")
+                li
+
+                    img(alt='', src='assets/images/propierty.jpg', title="Baño")
+                li
+
+                    img(alt='', src='assets/images/propierty.jpg', title="Cocina")
+                li
+
+                    img(alt='', src='assets/images/propierty.jpg', title="Habitación")
+                li
+
+                    img(alt='', src='assets/images/propierty.jpg', title="Sala Comedor")
+                li
+
+                    img(alt='', src='assets/images/propierty.jpg', title="Baño")
+                li
+
+                    img(alt='', src='assets/images/propierty.jpg', title="Cocina")
+                li
+
+                    img(alt='', src='assets/images/propierty.jpg', title="Habitación")
+
+        .sliderThumb.col-3
+            #slider-prev
+            ul
+                li.active(slideindex='0')
+                    a(href='#')
+                        img(src='assets/images/propierty.jpg')
+                li(slideindex='1')
+                    a(href='#')
+                        img(src='assets/images/propierty.jpg')
+                li(slideindex='2')
+                    a(href='#')
+                        img(src='assets/images/propierty.jpg')
+                li(slideindex='3')
+                    a(href='#')
+                        img(src='assets/images/propierty.jpg')
+                li(slideindex='4')
+                    a(href='#')
+                        img(src='assets/images/propierty.jpg')
+                li(slideindex='5')
+                    a(href='#')
+                        img(src='assets/images/propierty.jpg')
+                li(slideindex='6')
+                    a(href='#')
+                        img(src='assets/images/propierty.jpg')
+                li(slideindex='7')
+                    a(href='#')
+                        img(src='assets/images/propierty.jpg')
+
+            #slider-next
 

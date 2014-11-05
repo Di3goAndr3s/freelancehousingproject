@@ -1,73 +1,121 @@
 body
-    +bg($gray)
+    +bg(#111)
 
 /*@header*/
 
+
+
 header
     +w100
-    height: 320px
-    +bg(url('../images/bg-banner.jpg'))
-    +bs(cover)
-    +bp(bottom center)
-    > .wrapper
-        +grid-left
-    figure
-        +col
-        width: 132px
-        margin: 100px 0 0 200px
-        img
-            border: 6px solid $white
-            +s100
-            +radius
+    height: 460px
+    +cero
+    +relative
+    +block
+    padding: 106px 0 0
+    +before
+        +content('')
+        +s100
+        +top-left
+        +z(99)
 
-    .contact-data
-        +col
-        +wauto
-        margin: 100px 0 0 20px
-        +white
-        hgroup
-            h1,
-            h2
-                +fs(4, 100%, 700)
-            h2
-                +fw(400)
-        span
-            +bg($black)
-            +radius
-            +size(30px)
-            +lh(28px)
-            +tCenter
-            +left
-            clear: left
-            +mt(5px)
-        p
-            +fs(2, 30px, 400)
-            +left
-            +ti(10px)
-            margin: 5px 0 0
+    .blur
+        +top-left
+        +s100
+        filter: blur(0.3rem)
+        +bg(url('../images/bg-banner.jpg'))
+        +bs(cover)
+        +bp(right bottom)
+
+    .banner-container
+        width: 400px
+        box-shadow: 4px 4px 2px rgba(0,0,0,.5)
+        +degra
+        +relative
+        +block
+        border: thin solid $gray - 20
+        +centered(0, 0)
+        padding: 10px 10px 40px
+        +bb(4px solid $color)
+        figure
+            width: 132px
+            +centered(-76px, 10px)
+            img
+                border: 6px solid $color
+                +s100
+                +radius
+
+        .contact-data
+            +wauto
+            margin: 0
+            +co(gray-dark)
+            hgroup
+                +tCenter
+                h1,
+                h2
+                    +fs(2.4, 100%, 700)
+                h2
+                    +fw(400)
+                    +mb(20px)
+            span
+                +bg($color)
+                +radius
+                +size(30px)
+                +lh(38px)
+                +tCenter
+                +left
+                clear: left
+                +mt(5px)
+                i
+                    font-size: 1.5em
+                    +white
+                +nth1
+                    i
+                        font-size: 2.5em
+                +nth3
+                    i
+                        font-size: 2em
+
+            p
+                +fs(1.8, 30px, 400)
+                +left
+                +ti(10px)
+                margin: 5px 0 0
 
 nav
-    +bg($color)
+    +bg($color url('../images/overBanner.png') repeat top center)
     ul
         +page
         +tCenter
+        font-size: 0
         li
-            width: 20%
+            width: 33%
             +inline-block
+
+            +nth2
+                +bl(thin solid $white)
+                +br(thin solid $white)
             a
                 +white
                 +block
+
                 +tCenter
                 +upper
-                +fs(1.8, 60px, 700)
+                +fs(1.8, 50px, 400)
                 +noUnder
                 +transition(.2s)
 
 
+
+
 main
     +page
+
+.featured
+    +bg($gray-light + 100)
+    padding: 20px 10px
+    margin: 40px 0
+    +bb(4px solid $color)
     .featured-left
-        +mt(50px)
         span
             +bg($black)
             +radius
@@ -81,22 +129,24 @@ main
 
         h3
 
-            +fs(2, 100%, 400)
+            +fs(2, 100%, 700)
             +upper
             +mb(10px)
+            +co($gray-dark)
 
         p
             +fs(1.6, 110%, 400)
-            +co($gray-light)
+            +co($gray-dark)
 
-    .featured-right
-        +mt(50px)
+        .button
+            +right
+
 
 .company-branding
     +tCenter
     > figcaption
         +fs(1.6, 110%, 700)
-        +co($gray-light)
+        +co($gray-dark)
         +mt(10px)
         img
             +size(175px 80px)
@@ -104,9 +154,10 @@ main
 
 
 .properties
-    +mt(40px)
-    +pt(50px)
-    +bt(thin solid $gray - 20)
+    +bg($gray-light + 100)
+    padding: 20px 10px
+    margin: 0px 0 40px
+    +bb(4px solid $color)
     h3
         +fs(3, 100%, 400)
         +upper
@@ -116,21 +167,28 @@ main
             +inline-block
             +ti(20px)
             +fs(1.8, 200%, 400)
+            strong
+                +bg($color)
+                padding: 5px
+                +white
+                +radius(5px)
 
     .tabs-container
         +w100
-        +mt(20px)
         .filters
             +w100
-            +mb(20px)
+            margin: 20px 0 20px
 
 .chosen-container-single
     width: 100% $i
     .chosen-single
-        border: thin solid $gray - 10
+        border: thin solid $gray-dark + 150
         height: 40px
+        +radius(0px)
         +co($gray-dark)
-        +fs(1.4, 38px, 400)
+        +fs(1.4, 38px, 700)
+        +bb(2px solid $color)
+        +degra
 
 .chosen-container .chosen-results li.highlighted
     +bg($color)
@@ -138,16 +196,14 @@ main
 
 
 .container-propierty
-    @extend .grid-left
     max-height: 1380px
-    +bb(thin solid $gray - 20)
     +noScroll
     article.propierty
-        +col-4
         +mb(20px)
         +bg(white)
         +pb(20px)
-
+        width: 32.5%
+        border: thin solid $gray-light
         figure
             height: 220px
             +block
@@ -165,17 +221,20 @@ main
             +right
             +bg($color)
             padding: 5px
-            +radius(25px)
+            +radius(4px)
             +white
+            border: thin solid $gray
             margin: 10px 10px 0 0
             +fs(1.2, 100%, 300)
             +upper
-        h1
+        a
             +block
             +clear
             padding: 10px
             +fs(1.8, 110%, 700)
             +co($gray-dark)
+            +hover
+                +co($gray-dark - 50)
         .price
             +tCenter
             +co($color)
@@ -198,15 +257,18 @@ main
 
 
 section.new-projects
-    +bb(thin solid $gray - 20)
-    +pb(60px)
+    +bg($gray-light + 100)
+    padding: 20px 10px
+    margin: 40px 0
+    +bb(4px solid $color)
     h4
         +fs(3, 100%, 400)
         +upper
         +co($gray-dark)
-        margin: 30px 0
+        margin: 0 0 20px
     article
         +bg(white)
+        border: thin solid $gray-light
         > figure
             +w100
             img
@@ -296,6 +358,7 @@ ul.others-projects
             height: 44px
             +lh(44px)
             +tCenter
+
         .m2
             +bg(url('../images/icon-m2.png') left center $nr)
         .bathrooms
@@ -308,7 +371,10 @@ ul.others-projects
 
 
 .agent
-    +mt(40px)
+    +bg($gray-light + 100)
+    padding: 20px 10px
+    margin: 40px 0
+    +bb(4px solid $color)
     h3
         +fs(3, 100%, 400)
         +upper
@@ -319,13 +385,16 @@ ul.others-projects
         +co($gray-dark)
         +mb(20px)
 
+    input[type="submit"]
+        +right
+
     article
         +pl(40px)
         figure.about
             +col
             width: 132px
             img
-                border: 6px solid $white
+                border: 6px solid $color
                 +s100
                 +radius
 
@@ -353,7 +422,7 @@ ul.others-projects
                 i
                     +white
             > p
-                +fs(1.6, 25px, 700)
+                +fs(1.6, 30px, 700)
                 +left
                 +ti(7px)
                 margin: 5px 0 0
@@ -364,12 +433,503 @@ ul.others-projects
 footer
     +bg(#343434)
     +mt(40px)
-    height: 105px
+    +bb(4px solid $color)
+    height: 80px
     .wrapper
-        +bg(url('../images/copyright.jpg') right center $nr)
-        height: 105px
+        +bg(url('../images/copyright.jpg') center center $nr)
+        height: 80px
+
+
+.fixed-menu
+    +z(99999)
+    +fixed
+    left: 0
+    top: 0
+    +w100
+    a
+        +lh(40px)
+
+
+/*INTERNA*/
+
+.gallery
+    +bg(white)
+    +mt(20px)
+    padding: 10px
+    h1
+        +fs(2.4, 110%, 400)
+        +co($gray-dark)
+
+    .price
+        +fs(2, 110%, 400)
+        +co($color)
+        +tRight
+        p
+            +fs(1.4, 120%, 300)
+            +co($gray-light - 100)
+
+        span
+            +fw(700)
+            +co($gray-dark)
+    hr
+        border: 0
+        margin: 10px 0
+        +bg($gray-light - 100)
+        height: .05rem
+
+    .status
+        +tLeft
+        span
+            +inline-block
+            padding: 35px 10px 0
+            +tCenter
+            +fs(1.4, 100%, 400)
+            +co($gray-light - 100)
+        .m2
+            +bg(url('../images/icon-m2.png') top center $nr)
+        .bathrooms
+            +bg(url('../images/icon-shower.png') top center $nr)
+        .rooms
+            +bg(url('../images/icon-bed.png') top center $nr)
+        .garage
+            +bg(url('../images/icon-car.png') top center $nr)
+    .address
+        +fs(2, 110%, 400)
+        +co($color)
+        +tRight
+        p
+            +fs(1.4, 100%, 300)
+            +co($gray-light - 100)
+            +nth1
+                margin: 5px 0 0
+    .sliders
+        +mt(30px)
+        .bx-prev,
+        .bx-next
+            +block
+        .sliderBig
+            img
+                width: 100%
+                height: 410px
+            .bx-prev,
+            .bx-next
+                +none
+        .sliderThumb
+            img
+                width: 100%
+                height: 86px
+        #slider-prev,
+        #slider-next
+            +block
+            +tCenter
+            a i
+                +transition(.2s)
+                +co($gray-light)
+            a:hover i
+                +co($gray-dark)
+            i
+                +fs(3)
+
+        .bx-wrapper .bx-caption span
+            font-family: $font1
+            +fs(1.8, 100%, 400)
+            +co(white)
+
+        .bx-wrapper .bx-caption
+            +bgBlack(.1)
+
+.description-tabs
+    +bg(white)
+    +mt(20px)
+    padding: 10px
 
 
 
+#tabs
+    margin: 0
+    overflow: hidden
+    padding: 0
+    zoom: 1
+    position: relative
+    z-index: 1
+    +bb(thin solid $gray-dark + 70)
 
 
+#tabs li
+    display: block
+    margin: 0 10px
+    padding: 0
+    float: left
+
+
+#tabs li a
+    display: block
+    text-align: center
+    +co($gray-light - 100)
+    padding: 10px
+    +fs(2, 100%, 400)
+
+
+#tabs li a.current
+    +co($gray-dark)
+    +bb(3px solid $gray-dark + 70)
+
+
+.tab-section
+    padding: 10px 10px 30px
+    ul
+        margin: 15px 0 0
+        li
+            padding: 10px
+            +co($gray-light - 100)
+            +fs(1.6, 110%, 400)
+            i
+                +co($color)
+                +mr(10px)
+    h2
+        +fs(2, 110%, 400)
+        +co($gray-dark)
+    .address
+        +fs(1.6, 110%, 400)
+        +co($gray-dark)
+        margin: 5px 0
+    .price
+        +fs(2, 110%, 400)
+        +co($color)
+        +w100
+        +mb(20px)
+        p
+            +fs(1.4, 150%, 300)
+            +co($gray-light - 100)
+            +inline-block
+            +right
+            +m0
+        span
+            +fw(700)
+            +co($gray-dark)
+            +inline-block
+            +ml(5px)
+
+    p
+        +co($gray-light - 100)
+        +fs(1.4, 150%, 300)
+    .zone
+        +fs(2, 110%, 400)
+        +co($color)
+        +tRight
+        p
+            +fs(1.4, 130%, 300)
+            +co($gray-light - 100)
+            +m0
+
+    .table
+        margin: 10px 0 0
+        border: thin solid $gray - 50
+        p
+            +co($gray-dark)
+            +m0
+            +fs(1.6, 110%, 400)
+            padding: 10px
+            +even
+                +bg($gray)
+        span
+            +tRight
+            +right
+            +fw(700)
+
+.icons
+    +w100
+    +bt(thin solid $gray-light - 70)
+    h3
+        +fs(2, 110%, 400)
+        +co($gray-dark)
+        margin: 20px 0 10px
+    a
+        +inline-block
+        padding: 10px
+        +wauto
+        +tCenter
+        +co($gray-dark)
+        &:hover p
+            +co($color - 50)
+        p
+            +fs(1.4, 130%, 300)
+            +co($color)
+            margin: 10px 0 0
+            +transition()
+
+.new-projects .bx-wrapper
+    li
+        +relative
+        +before
+            content: ""
+            width: 100%
+            height: 320px
+            top: 0
+            left: 0
+            position: absolute
+            display: block
+            background: rgba(0, 0, 0, 0.3)
+            z-index: 99
+            max-height: 205px
+
+.new-projects .bx-wrapper
+    .bx-prev,
+    .bx-next
+        +ti(0)
+        +bg(white)
+        +radius(4px)
+        +tCenter
+        +size(28px)
+        i
+            +transition(.2s)
+            +co($gray-light - 100)
+            +fs(2, 100%, 300)
+            +mt(4px)
+        &:hover i
+            +co($gray-dark)
+    .bx-prev
+        top: 22px
+        right: 37px
+        left: $in
+    .bx-next
+        top: 22px
+        right: 8px
+.side-left
+    .button
+        +w100
+        +mt(19px)
+    .small
+        margin: 15px 0 6px
+        +co($gray-dark)
+
+    .space
+        margin: 15px 8px 6px
+    figure.construction
+        +mt(10px)
+        +relative
+        +bg(white)
+        +tCenter
+        figcaption
+            padding: 10px 0
+            +fs(1.4, 110%, 400)
+            +co($gray-dark)
+            +tCenter
+            +block
+
+    .contact-data
+        +bg(white)
+        +pb(20px)
+        figure
+            +br(thin solid $gray - 50)
+            width: 30%
+            height: 100px
+            +left
+            +tCenter
+            img
+                +size(60px)
+                +radius(100%)
+
+        hgroup
+            +right
+            width: 65%
+            h4
+                +fs(1.4, 110%, 700)
+                +co($gray-dark)
+            h5
+                +fs(1.4, 110%, 400)
+                +co($gray-dark)
+                margin: 2px 0 5px
+            p
+                +fs(1.3, 110%, 300)
+                +co($gray-light - 100)
+                margin: 3px 0
+                i
+                    +co($color)
+                    +mr(10px)
+        a.seemore
+            +fs(1.4, 110%, 400)
+            +tCenter
+            +block
+            margin: 10px 0
+            +transition(.2s)
+
+
+        .button
+            +centered
+            +block
+            width: 90%
+    .map
+        +bg(white)
+        +mt(10px)
+        padding: 10px
+        .button
+            +centered(10px)
+            width: 40%
+            +block
+            +co($gray-dark)
+/*COLORS*/
+
+.yellow
+    header
+        .banner-container
+            +bb(4px solid $yellow)
+            figure
+                img
+                    border: 6px solid $yellow
+    .chosen-container-single .chosen-single
+        +bb(2px solid $yellow)
+    .properties h3 span strong
+        +bg($yellow)
+    .seemore
+        +co($yellow)
+        +hover
+            +co($yellow - 50)
+    nav
+        +bg($yellow)
+    .chosen-container .chosen-results li.highlighted
+        +bg($yellow)
+    .container-propierty
+        article.propierty
+            .badge
+                +bg($yellow)
+            .price
+                +co($yellow)
+    section.new-projects
+        article
+            .price
+                +co($yellow)
+    ul.others-projects
+        .prices
+            +co($yellow)
+
+    .agent
+        article
+            .contact-data
+                span
+                    +bg($yellow)
+    .gallery
+        .price
+            +co($yellow)
+        .address
+            +co($yellow)
+    .tab-section
+        ul
+            li
+                i
+                    +co($yellow)
+        .price
+            +co($yellow)
+        .zone
+            +co($yellow)
+
+    .icons
+        a:hover p
+            +co($yellow - 50)
+        p
+            +co($yellow)
+    .button
+        +bg($yellow)
+        +hover
+            +bg($yellow - 30)
+
+    .tabs
+        li
+            a
+                +hover
+                    +bg($yellow)
+            .active
+                +bg($yellow)
+
+    .pager-rounded
+        ul
+            li
+                .active
+                    +co($yellow)
+
+    .side-left .contact-data
+        i
+            +co($yellow)
+
+.black
+    header
+        .banner-container
+            +bb(4px solid $black)
+            figure
+                img
+                    border: 6px solid $black
+    .chosen-container-single .chosen-single
+        +bb(2px solid $black)
+    .properties h3 span strong
+        +bg($black)
+    .seemore
+        +co($black)
+        +hover
+            +co($black - 50)
+    nav
+        +bg($black)
+    .chosen-container .chosen-results li.highlighted
+        +bg($black)
+    .container-propierty
+        article.propierty
+            .badge
+                +bg($black)
+            .price
+                +co($black)
+    section.new-projects
+        article
+            .price
+                +co($black)
+    ul.others-projects
+        .prices
+            +co($black)
+
+    .agent
+        article
+            .contact-data
+                span
+                    +bg($black)
+    .gallery
+        .price
+            +co($black)
+        .address
+            +co($black)
+    .tab-section
+        ul
+            li
+                i
+                    +co($black)
+        .price
+            +co($black)
+        .zone
+            +co($black)
+
+    .icons
+        a:hover p
+            +co($black - 50)
+        p
+            +co($black)
+
+    .tabs
+        li
+            a
+                +hover
+                    +bg($black)
+            .active
+                +bg($black)
+
+    .button
+        +bg($black)
+        +hover
+            +bg($black - 30)
+
+
+    .pager-rounded
+        ul
+            li
+                .active
+                    +co($black)
+
+    .side-left .contact-data
+        i
+            +co($black)

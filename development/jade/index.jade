@@ -1,11 +1,12 @@
 include partials/main
 doctype html
-hmtl(lang="es")
-    +head('Inicio')
+html(lang="es")
+    +head
     body(class='#{color}')
+        +main-menu
         header
-            //-        img(src="assets/images/bg-banner.jpg")
-            .wrapper
+            .blur
+            .banner-container
                 figure
                     img(src="assets/images/agente.jpg")
                 .contact-data
@@ -21,13 +22,14 @@ hmtl(lang="es")
                     span
                         +icon('envelope-o','')
                     p #{mail}
-        +main-menu
+                    +clear
+
         main
             section.featured.grid
                 .featured-left.grid.col-8
                     .col-2
                         span
-                            +icon('inbox','3x')
+                            +icon('envelope-o','3x')
                     .col-10
                         h3 Consigna tus muebles conmigo
                         +paragraph-mini
@@ -57,16 +59,16 @@ hmtl(lang="es")
                         .col-2
                             +select('No garajes')
                     .container-propierty
-                        +propierty
-                        +propierty('Arriendo')
-                        +propierty
-                        +propierty('Arriendo')
-                        +propierty
-                        +propierty('Arriendo')
-                        +propierty
-                        +propierty('Arriendo')
-                        +propierty
-                        +pager-rounded
+                        .grid-left
+                            +propierty
+                            +propierty('Arriendo')
+                            +propierty
+                            +propierty('Arriendo')
+                            +propierty
+                            +propierty('Arriendo')
+                            +propierty
+                            +propierty('Arriendo')
+                            +pager-rounded
 
             section.new-projects.grid#proyectos-anchor
                 h4 Proyectos nuevos

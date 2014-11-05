@@ -1,0 +1,193 @@
+include partials/main
+doctype html
+html(lang="es")
+    +head
+    body(class='#{color}')
+        header
+            .blur
+            .banner-container
+                figure
+                    img(src="assets/images/agente.jpg")
+                .contact-data
+                    hgroup
+                        h1 #{name}
+                        h2 #{rol}
+                    span
+                        +icon('mobile','lg')
+                    p #{mobil}
+                    span
+                        +icon('phone','')
+                    p #{phone}
+                    span
+                        +icon('envelope-o','')
+                    p #{mail}
+                    +clear
+        main.grid
+            .col-9
+                .gallery
+                    .grid
+                        h1.col-7 Espectacular apartamento con vista a los cerros
+                        .price.col-5
+                            | $1.400.000.000
+                            p Precio aprox por M2
+                                span  $3.000.000
+                    hr
+                    .grid
+                        .status.col-7
+                            span.m2 130 M2
+                            span.bathrooms 3 Baños
+                            span.rooms 4 Habitaciones
+                            span.garage 2 Garages
+                        .address.col-5
+                            | Carrera 45 # 124
+                            p Apartamento en arriendo
+                            p Chapinero, Bogotá. Cundinamarca.
+
+                    +slider-thumbs
+
+                .description-tabs
+                    ul#tabs
+                        li
+                            a(href="#description",  title="Descripción") Descripción
+                        li
+                            a(href="#features", title=" Caracteristicas") Caracteristicas
+
+                    #description.tab-section.grid
+                        .col-7
+                            h2 Espectacular apartamento con vista a los cerros
+                            .address
+                                | Carrera 45 # 124
+                            .price.col-5
+                                | $1.400.000.000
+                                p Precio aprox por M2
+                                    span $3.000.000
+                            +paragraph
+                            +paragraph
+                        .col-5
+                            .zone
+                                p Apartamento en arriendo
+                                p Chapinero, Bogotá. Cundinamarca.
+                            .table
+                                p Tipo de inmueble:
+                                    span Apartamento
+                                p Ubicación:
+                                    span Calle 64 # 127
+                                p Habitaciones:
+                                    span 2
+                                p Baños:
+                                    span 4
+                                p Garajes:
+                                    span 2
+                                p Codigo Inmueble:
+                                    span CG034629
+                                p Antiguedad:
+                                    span 2 años
+
+                    #features.tab-section.grid
+                        .col-6
+                            h2 Caracteristicas exteriores
+                            ul
+                                li
+                                    +icon('check','lg')
+                                    | Parqueadero cubierto
+                                li
+                                    +icon('check','lg')
+                                    | Gimnasio
+                                li
+                                    +icon('check','lg')
+                                    | Open bar
+                                li
+                                    +icon('check','lg')
+                                    | B.B.Q
+                                li
+                                    +icon('check','lg')
+                                    | Planta de gasolina
+                        .col-6
+                            h2 Caracteristicas interiores
+                            ul
+                                li
+                                    +icon('check','lg')
+                                    | Estufa a gas
+                                li
+                                    +icon('check','lg')
+                                    | Calentador a gas
+                                li
+                                    +icon('check','lg')
+                                    | Parilla
+                                li
+                                    +icon('check','lg')
+                                    | Citofono
+                                li
+                                    +icon('check','lg')
+                                    | Ascensor privado
+                                li
+                                    +icon('check','lg')
+                                    | Pisos en marmol
+                                li
+                                    +icon('check','lg')
+                                    | Estatua de Botero
+                    .icons
+                        h3 Planos videos y otros documentos
+                        a(href="#", title="Planos")
+                            +icon('file-o', 'lg')
+                            p Planos
+                        a(href="#", title="Video")
+                            +icon('video-camera', 'lg')
+                            p Video.pdf
+                        a(href="#", title="Descargar")
+                            +icon('file-text-o', 'lg')
+                            p nombredearchivo.pdf
+                        a(href="#", title="Descargar")
+                            +icon('file-text-o', 'lg')
+                            p nombredearchivo.pdf
+
+
+            .side-left.col-3
+                +button('PROMUEVE ESTE INMUEBLE')
+                +clear
+                .grid
+                    .col-4
+                        +button-icon('','Guardar','button small','save')
+                    .col-4
+                        +button-icon('','Compartir','button small','share-alt')
+                    .col-4
+                        +button-icon('','Imprimir','button small','print')
+                figure.construction
+                    img(src="assets/images/constructora.jpg")
+
+
+                .contact-data
+                    figure
+                        img(src="assets/images/agente.jpg")
+                    hgroup
+                        h4 #{name}
+                        h5 #{rol}
+
+                        p
+                            +icon('mobile','lg')
+                            | #{mobil}
+                        p
+                            +icon('phone','')
+                            | #{phone}
+                        p
+                            +icon('envelope-o','')
+                            | #{mail}
+                    +clear
+                    a.seemore(href="index.html") Ver más inmuebles de este agente
+                    +button('CONTACTAR AGENTE')
+                .map
+                    iframe( src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d7953.073961125221!2d-74.04913773611251!3d4.676302113557071!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1scalle+93+con+15+bogota!5e0!3m2!1ses!2s!4v1414170150884" width="100%" height="400" frameborder="0" style="border:0")
+                    +button-icon('','Como Llegar','button small','location-arrow')
+        footer
+            .wrapper
+
+
+
+
+
+
+
+
+
+
+

@@ -3,6 +3,9 @@
 
 mixin button(value)
     a(title='', alt='', href='#', class="button")= value
+    
+mixin button-small(value)
+    a(title='', alt='', href='#', class="button small")= value
 
 mixin submit(value, size)
     input(type="submit", title="#{value}", class="button #{size}")
